@@ -1,3 +1,8 @@
+body
+{
+display: grid;
+
+}
 
 
 header
@@ -18,14 +23,19 @@ stroke: aliceblue;
 
 }
 
+
+
+.hero
+{
+width: 500px;
+}
+
+main{
+
+}
+
 footer
 {
 border: 1px solid black;
 margin-top: 0;
-
-}
-
-main{
-display: grid;
-grid-template-columns: repeat(12, 1fr);
 }
