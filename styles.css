@@ -1,24 +1,31 @@
 
-body
-{
-display: grid;
-grid-template-columns: repeat(12, 1fr);
-}
 
 header
 {
-position: fixed;
-height: 20px;
-background-color: rgba(21, 21, 43, 0.887);
+height: 50px;
+background-color: rgba(0, 0, 29, 0.791);
+display: flex;
+justify-content: center;
 }
 
 .namn
 {
-justify-content: center;
-}
+margin-top: 15px ;
+fill: rgb(1, 1, 19);
+font-family:Georgia, 'Times New Roman', Times, serif;
+font-weight: bold;
+stroke: aliceblue;
 
+}
 
 footer
 {
-color: blue;
+border: 1px solid black;
+margin-top: 0;
+
+}
+
+main{
+display: grid;
+grid-template-columns: repeat(12, 1fr);
 }
