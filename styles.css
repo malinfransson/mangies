@@ -1,7 +1,10 @@
 body
 {
 display: grid;
-
+display: grid;
+grid-template-rows: auto 1fr auto; /* header, main content, footer */
+height: 100vh; /* Gör så att body fyller hela höjden */
+margin: 0;
 }
 
 
@@ -10,12 +13,11 @@ header
 height: 50px;
 background-color: rgba(0, 0, 29, 0.791);
 display: flex;
-justify-content: center;
+align-items: center;
 }
 
 .namn
 {
-margin-top: 15px ;
 fill: rgb(1, 1, 19);
 font-family:Georgia, 'Times New Roman', Times, serif;
 font-weight: bold;
