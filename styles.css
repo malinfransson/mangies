@@ -1,0 +1,46 @@
+body
+{
+display: grid;
+grid-template-rows: 1fr 1fr 1fr; /* header, main content, footer */
+height: 10vh; /* Gör så att body fyller hela höjden */
+}
+
+
+header
+{
+height: 50px;
+background-color: rgba(0, 0, 29, 0.791);
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.namn
+{
+fill: rgb(1, 1, 19);
+font-family:Georgia, 'Times New Roman', Times, serif;
+font-weight: bold;
+stroke: aliceblue;
+}
+
+
+.hero
+{
+width: 500px;
+}
+
+main{
+
+}
+
+footer
+{
+border: 1px solid black;
+margin-top: 0;
+}
+
+.img
+{
+width: 100%;
+}
