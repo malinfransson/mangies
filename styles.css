@@ -1,50 +1,58 @@
 
 
-.namn
-{
-fill: rgb(1, 1, 19);
-font-family:Georgia, 'Times New Roman', Times, serif;
-font-weight: bold;
+.namn {
+    fill: rgb(1, 1, 19);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
 }
 
+<<<<<<< HEAD
 #wrapper
 {
 display: flex;
 grid-template-columns: repeat(8, 1fr); 
 grid-template-rows: auto;
+=======
+#wrapper {
+    display: grid; 
+    grid-template-columns: repeat(8, 1fr); 
+    grid-template-rows: auto;
+>>>>>>> 215a07e8a1f0eb4d48a4dbb5ccc6719d5d534843
 }
 
 
-img
-{ 
-display: block;
-        width: 100%; /* Fyller förälderelementet */
-        height: auto; /* Bevarar proportionerna */ 
-        object-fit: cover; /* Klipper och fyller utan att ändra proportioner */
-        margin: 5px;
+img { 
+    display: block;
+    width: 100%; /* Fyller förälderelementet */
+    height: auto; /* Bevarar proportionerna */ 
+    object-fit: cover; /* Klipper och fyller utan att ändra proportioner */
+    margin: 5px;
 }
 
-header
-{
-height: 50px;
-background-color: rgba(0, 0, 29, 0.791);
-display: flex;
-justify-content: center;
-align-items: center;
+header {
+    height: 50px;
+    background-color: rgba(0, 0, 29, 0.791);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
-main{
+main {
     grid-column: span 8; 
     grid-row: 1;
     max-height: 300px;
 }
 
 
-.footer
-{
+.footer{
     grid-column: span 8;
+<<<<<<< HEAD
 border: 1px solid black;
+=======
+    grid-row: ;
+    border: 1px solid black;
+>>>>>>> 215a07e8a1f0eb4d48a4dbb5ccc6719d5d534843
 }
 
 
