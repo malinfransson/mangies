@@ -44,7 +44,6 @@ header {
 {
 margin: 10px;
 width: 100%;
-flex-wrap: wrap;
 }
 
 /* Styling för sökfältet */
@@ -55,20 +54,21 @@ input[type="text"] {
     font-size: 12pt;
     border-radius: 30px; /* rundar hörnen */
     background-color: #fff; /* bakgrundsfärg */
-    width: 45%;
     height: 50%;
+}
+
+#ikoner
+{
+margin-left: auto; /* Skjuter varukorgen längst till höger */
 }
 
 .heart
 {
-left: auto;
- position: relative;
 right: 0;
 }
 
 
 .cart {
-    margin-left: auto; /* Skjuter varukorgen längst till höger */
     margin-top: 10px;
     margin-right: 10px;
     width: 25px;
