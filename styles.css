@@ -55,8 +55,9 @@ input[type="text"] {
     font-size: 12pt;
     border-radius: 30px; /* rundar hörnen */
     background-color: #fff; /* bakgrundsfärg */
-    width: 50%;
-    height: 40%;
+    width: 45%;
+    height: 50%;
+   
 }
 
 
