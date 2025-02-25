@@ -46,12 +46,14 @@ margin: 10px;
     width: 25px;
 }
 
-#menu 
-{
-display: none;
+#menu.active ul {
+    display: block; /* döljer menny-text*/ 
+    position: fixed;
 }
 
-
+#menu ul{
+    display: none;
+}
 
 
 
