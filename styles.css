@@ -12,20 +12,6 @@
     object-fit: cover; /* Klipper och fyller utan att ändra proportioner */
 }
 
-.namn {
-    color: rgba(202, 229, 223, 0.791); 
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: large; 
-    position: absolute; 
-    
-   
-}
-
-.namn_container {
-    display: flex;
-    justify-content: space-between; /* Sprider ut elementen */
-}
-
 
 header {
     width: 100%;
@@ -37,6 +23,22 @@ header {
     align-items: center; /* Centrera vertikalt */
     justify-content: space-between; /* Sprider ut elementen */
 }
+
+
+.namn_container {
+    display: inline-flex; 
+}
+
+.namn {
+    color: rgba(202, 229, 223, 0.791); 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large; 
+    justify-content: center;
+    align-items: center;
+
+}
+
+
 
 #hamburger 
 {
