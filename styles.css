@@ -13,16 +13,17 @@
 }
 
 .namn {
-    color: rgba(202, 229, 223, 0.791); 
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: large; 
+    display: flex;
+    justify-content: center; /* Centrerar horisontellt */
+    align-self: center;
 }
 
 .namn_container {
-    display: flex;
-    flex: 2; /* Gör att den växer */
-    justify-content: center; /* Centrerar horisontellt */
-    align-self: center;
+ 
+    color: rgba(202, 229, 223, 0.791); 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large; 
+    
 }
 
 
