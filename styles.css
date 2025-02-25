@@ -26,7 +26,7 @@ header {
 
 
 .namn_container {
-    display: inline-flex; 
+    display: flex;
 }
 
 .namn {
@@ -57,7 +57,13 @@ input[type="text"] {
     background-color: #fff; /* bakgrundsfärg */
     width: 45%;
     height: 50%;
-   
+}
+
+.heart
+{
+left: auto;
+ position: relative;
+right: 0;
 }
 
 
