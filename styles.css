@@ -13,17 +13,16 @@
 }
 
 .namn {
-    display: flex;
-    justify-content: center; /* Centrerar horisontellt */
-    align-self: center;
-}
-
-.namn_container {
- 
     color: rgba(202, 229, 223, 0.791); 
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: large; 
-    
+   
+}
+
+.namn_container {
+    display: flex;
+    justify-content: center; /* Centrerar horisontellt */
+    align-self: center;
 }
 
 
@@ -46,6 +45,13 @@ margin: 10px;
     margin-right: 10px;
     width: 25px;
 }
+
+#menu 
+{
+display: none;
+}
+
+
 
 
 
