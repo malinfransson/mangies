@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title> 
-    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="hamburger.css"> 
+    <script>
+        function toggleActive(elementId) {
+          document.getElementById(elementId).classList.toggle("active");
+        }
+      </script>
 </head>
 
 <body>
@@ -15,10 +21,22 @@
     </nav>
 
 <header> 
+<div id="hamburger" onclick="toggleActive('menu')" >
+    <div class="hamburgerBar"></div>
+    <div class="hamburgerBar"></div>
+    <div class="hamburgerBar"></div>
+  </div> 
+<div class="namn_container"> 
 <div class="namn">
 <p> 
 MANGIES
 </p>
+</div>
+
+<div class="cart">
+<img src="varukorg.png" alt="varukorg"> 
+</div>
+
 </div>
 
 </header>
@@ -36,25 +54,33 @@ MANGIES
     <div class="card"> 
       
     <p> 
-    kort pa klader 
+   <img src="chyntia-juls-HlVjI5WmoQY-unsplash.jpg" alt="kavaj"> 
     </p>
     <div class="text_kort">
-        klanning
+        kavaj
     </div>
 
     </div>
 
     <div class="card"> 
         <p> 
-        kort pa klader 
+     <img src="oladimeji-odunsi-aU_eOcelLhQ-unsplash.jpg" alt="accessoarer"> 
         </p>
+        <div class="text_kort">
+            accessoarer
+        </div>
     
     </div>
     
     <div class="card"> 
         <p> 
-        kort pa klader 
+    <img src="mina-rad-ioCYSvwcBlc-unsplash.jpg" alt="t-shirt"> 
         </p>
+
+        <div class="text_kort">
+            t-shirts
+        </div>
+    
     
         </div>
     
