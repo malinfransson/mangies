@@ -42,6 +42,17 @@ width: 100%;
 flex-wrap: wrap;
 }
 
+/* Styling för sökfältet */
+input[type="text"] {
+    float: right;
+    padding: 4px;
+    border: none;
+    font-size: 12pt;
+    border-radius: 30px; /* rundar hörnen */
+    background-color: #fff; /* bakgrundsfärg */
+    width: 50%;
+    height: 40%;
+}
 
 
 .cart {
