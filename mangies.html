@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title> 
+    <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="hamburger.css"> 
+    <link rel="stylesheet" href="hamburger.css">
+    <script src="menu.js"> </script>
     <script>
         function toggleActive(elementId) {
-          document.getElementById(elementId).classList.toggle("active");
+            document.getElementById(elementId).classList.toggle("active");
         }
-      </script>
+    </script>
 </head>
 
 <body>
-    <header> 
-        <div id="hamburger" onclick="toggleActive('menu')" >
-            <div class="hamburgerBar"></div>
-            <div class="hamburgerBar"></div>
-            <div class="hamburgerBar"></div>
-        </div> 
-
+    <header>
+        
         <nav id="menu">
+            <div id="hamburger" onclick="toggleActive('menu')">
+                <div class="hamburgerBar"></div>
+                <div class="hamburgerBar"></div>
+                <div class="hamburgerBar"></div>
+            </div>
             <ul>
                 <li><a href="#home">Hem</a></li>
                 <li><a href="#about">Om oss</a></li>
@@ -29,84 +31,84 @@
                 <li><a href="#contact">Kontakt</a></li>
             </ul>
         </nav>
-        
-        <div class="namn_container"> 
+
+        <div class="namn_container">
             <div class="namn">
                 <p>MANGIES</p>
             </div>
 
             <input type="text" placeholder="Search.."> <!-- test för sökfält-->
 
-   <div id= "ikoner"> 
-     <div class="heart"> 
-            <h2> &hearts;</h2>
-        </div>
+            <div id="ikoner">
+                <div class="heart">
+                    <h2> &hearts;</h2>
+                </div>
 
-        </div>
+            </div>
             <div class="cart">
-                <img src="varukorg.png" alt="varukorg"> 
+                <img src="varukorg.png" alt="varukorg">
             </div>
         </div>
-    </div>
-    
+        </div>
+
     </header>
-    
+
     <div id="wrapper">
         <main>
             <div class="hero">
                 <img src="malicki-m-beser-PKMvkg7vnUo-unsplash.jpg" alt="overstbild">
             </div>
-            
-            <div class="container">
-                <div class="card"> <!--fixa sen --> 
-                <img src="chyntia-juls-HlVjI5WmoQY-unsplash.jpg" alt="kavaj"> 
-                
-                <div class="text_kort"> <!--fixa sen -->
-                    kavaj <!--fixa sen -->
-                </div>
-            </div>
-            
-            <div class="card"> 
-                <img src="oladimeji-odunsi-aU_eOcelLhQ-unsplash.jpg" alt="accessoarer"> 
-                <div class="text_kort">
-                    accessoarer
-                </div>
-            </div>
-            
-            <div class="card"> 
-                <img src="mina-rad-ioCYSvwcBlc-unsplash.jpg" alt="t-shirt"> 
-                <div class="text_kort">
-                    t-shirts
-                </div>
-            </div>
-            
-            <div class="card"> 
-                <p> 
-                    kort pa klader
-                </p>
-            </div>
-            
-            <div class="card"> 
-                <p> 
-                    kort pa klader 
-                </p>
-            </div>
-        
-            <div class="card"> 
-                <p> 
-                kort pa klader 
-                </p>
-            
-            </div>
-        </div>
-    </main>
-</div>
 
-<footer>
-    <a href="#länk" >Instagram</a> <!-- OBS fixa länk här -->
-    <a href="#länk" >TikTok</a> <!-- OBS fixa länk här --> 
-</footer>
-   
+            <div class="container">
+                <div class="card"> <!--fixa sen -->
+                    <img src="chyntia-juls-HlVjI5WmoQY-unsplash.jpg" alt="kavaj">
+
+                    <div class="text_kort"> <!--fixa sen -->
+                        kavaj <!--fixa sen -->
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="oladimeji-odunsi-aU_eOcelLhQ-unsplash.jpg" alt="accessoarer">
+                    <div class="text_kort">
+                        accessoarer
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="mina-rad-ioCYSvwcBlc-unsplash.jpg" alt="t-shirt">
+                    <div class="text_kort">
+                        t-shirts
+                    </div>
+                </div>
+
+                <div class="card">
+                    <p>
+                        kort pa klader
+                    </p>
+                </div>
+
+                <div class="card">
+                    <p>
+                        kort pa klader
+                    </p>
+                </div>
+
+                <div class="card">
+                    <p>
+                        kort pa klader
+                    </p>
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <a href="#länk">Instagram</a> <!-- OBS fixa länk här -->
+        <a href="#länk">TikTok</a> <!-- OBS fixa länk här -->
+    </footer>
+
 </body>
 
-</html> 
+</html>
