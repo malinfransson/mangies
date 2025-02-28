@@ -1,6 +1,5 @@
 #hamburger {
     position: relative;
-    display: inline-block;
     cursor: pointer;
     height: 35px;
     width: 35px;
@@ -15,7 +14,7 @@ color: rgba(202, 229, 223, 0.791);
     border-bottom: 2.5px solid;
 
   }
-  
+
   .hamburgerBar:nth-child(1) { top: 0; }
   .hamburgerBar:nth-child(2) { top: 15px; }
   .hamburgerBar:nth-child(3) { top: 30px; }
