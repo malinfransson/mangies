@@ -89,7 +89,7 @@ flex-direction: column;
 
 #menu {
     display: absolute;
-    background-color: rgb(2, 60, 48);
+   
     transition: 2s ease-in;
 }
 
