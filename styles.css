@@ -20,20 +20,27 @@ header {
     top: 0;
     left: 0;
     background-color: rgba(2, 60, 48, 0.791);
-    display: flex;
+    display: flex;/* Centrera vertikalt */
+    justify-content: space-between;/* Sprider ut elementen */
     align-items: center;
-    /* Centrera vertikalt */
-    justify-content: space-between;
-    /* Sprider ut elementen */
 }
 
 
 .namn_container {
     display: flex;
+    justify-content: center;
+    right: 50%;
 }
 
 #hamburger {
     margin: 10px;
+}
+
+.active #hamburger
+{
+float: right;
+padding: 10px;
+margin-right: 5%;
 }
 
 
@@ -41,8 +48,6 @@ header {
     color: rgba(202, 229, 223, 0.791);
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: large;
-    justify-content: center;
-    align-items: center;
 }
 
 
@@ -51,7 +56,8 @@ header {
 /* Styling för sökfältet */
 input[type="text"] {
     float: right;
-    padding: 4px;
+    margin: 10px;
+    padding: 5px;
     border: none;
     font-size: 12pt;
     border-radius: 30px;
@@ -59,6 +65,7 @@ input[type="text"] {
     background-color: #fff;
     /* bakgrundsfärg */
     height: 50%;
+    width: 30vw;
 }
 
 #ikoner {
@@ -78,14 +85,13 @@ input[type="text"] {
 }
 
 #menu {
-    display: block;
+    display: absolute;
     background-color: rgb(2, 60, 48);
-    transition: 2s ease-out;
+    transition: 2s ease-in;
 }
 
 #menu.active ul {
     display: block; 
-    flex-direction: column; 
     height: 100vh;
     width: 100vw;
 }
@@ -98,12 +104,21 @@ input[type="text"] {
 }
 
 #menu li {
-    padding: 5px;
+    padding-top: 20px;
  
 }
 
 #menu li a {
     color: #ffff;
+}
+
+#lista
+{
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+align-items: center;
 }
 
 
