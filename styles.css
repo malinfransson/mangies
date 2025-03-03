@@ -171,4 +171,14 @@ footer {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
+    box-sizing: border-box; /* Inkluderar padding i höjden */
+}
+
+footer a {
+    text-decoration: none;
+    color: rgba(2, 60, 48, 0.791);
+}
+
+footer a:hover {
+    color: #fff;
 }
