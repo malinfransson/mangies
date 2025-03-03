@@ -11,6 +11,7 @@ img {
     /* Bevarar proportionerna */
     object-fit: cover;
     /* Klipper och fyller utan att ändra proportioner */
+    max-height: 300px;
 }
 
 
@@ -21,40 +22,41 @@ header {
     left: 0;
     background-color: rgba(2, 60, 48, 0.791);
     display: flex;/* Centrera vertikalt */
-    justify-content: space-between;/* Sprider ut elementen */
-    align-items: center;
+    justify-content: space-between;
 }
 
 
-.namn_container {
-    display: flex;
-    justify-content: center;
-    right: 50%;
+.header_container {
+   display: flex;
+   align-items: center;
+   justify-items: center;
 }
+
+#namn {
+    flex: 1;
+    color: rgba(202, 229, 223, 0.791);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+align-self: center;
+}
+
 
 #hamburger {
     margin: 10px;
+    flex: 1;
 }
 
 .active #hamburger
 {
 float: right;
-padding: 10px;
+padding: 2%;
 margin-right: 5%;
 }
 
 
-.namn {
-    color: rgba(202, 229, 223, 0.791);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: large;
-}
-
-
-
-
 /* Styling för sökfältet */
 input[type="text"] {
+    flex: 1;
     float: right;
     margin: 10px;
     padding: 5px;
@@ -69,20 +71,21 @@ input[type="text"] {
 }
 
 #ikoner {
-    margin-left: auto;
-    /* Skjuter varukorgen längst till höger */
+    margin-left: auto;/* Skjuter längst till höger */
+    margin-right: 5px;
 }
-
-.heart {
-    right: 0;
-}
-
 
 .cart {
-    margin-top: 10px;
     margin-right: 10px;
     width: 25px;
 }
+
+#lista
+{
+display: flex;
+flex-direction: column;
+}
+
 
 #menu {
     display: absolute;
@@ -100,56 +103,57 @@ input[type="text"] {
     display: none;
     list-style: none;
     text-align: center;
-
 }
 
 #menu li {
     padding-top: 20px;
- 
 }
 
 #menu li a {
     color: #ffff;
 }
 
-#lista
-{
-display: flex;
-flex-direction: column;
-justify-content: center;
-text-align: center;
-align-items: center;
-}
-
 
 .hero {
     margin-top: 30px;
     margin-bottom: 30px;
-
 }
+
 
 main {
     background-color: rgba(192, 207, 202, 0.703);
 }
 
+div.scroll-container {
+    display: flex; 
+    border: 1px solid black;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+}
+ 
+  div.scroll-container img {
+    padding: 10px;
+    max-height: 30vh;
+    height: auto;
+    /* Bevarar proportionerna */
+    object-fit: cover;
+    /* Klipper och fyller utan att ändra proportioner */
+  }
 
-.container {
+.card_container {
     display: flex;
     flex-wrap: wrap;
     background-color: #ffff;
     gap: 20px;
     text-align: center;
     justify-content: center;
-
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
     width: 40%;
     height: auto;
-    flex-grow: 1;
-    margin: 10px;
+    flex: 1 1 calc(50% - 20px); /* Standard: 2 kolumner */
 }
 
 .text_kort {
@@ -172,3 +176,77 @@ footer {
     align-items: flex-start;
     gap: 8px;
 }
+
+
+/* Klass för att ändra till 1 kolumn */
+.card_container.one-column .card {
+    flex: 1 1 100%;
+}
+
+/* Klass för att ändra till 3 kolumner */
+.card_container.three-columns .card {
+    flex: 1 1 calc(33.33% - 20px);
+}
+
+/* Klass för att ändra till 4 kolumner */
+.card_container.four-columns .card {
+    flex: 1 1 calc(25% - 20px);
+}
+
+/* Styling för knapparna */
+.button-container {
+    margin: 20px;
+    display: flex;
+    gap: 10px;
+   
+  
+}
+
+button {
+    padding: 10px ;
+    background-color: rgb(2, 60, 48);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+button:hover {
+    background-color: rgb(4, 90, 72);
+}
+
+/* 3 kolumner (syns bara på tablet & desktop) */
+@media (min-width: 768px) {
+    .card_container .card {
+        flex: 1 1 calc(33.33% - 20px);
+    }
+    .card_container.three-columns .card {
+        flex: 1 1 calc(33.33% - 20px);
+    }
+    .button-container .one-column-btn, 
+    .button-container .two-column-btn
+    { 
+display: none;
+    }
+    }
+
+/* 4 kolumner (syns bara på stora skärmar) */
+@media (min-width: 1024px) {
+    .card_container.four-columns .card {
+        flex: 1 1 calc(25% - 20px);
+    } 
+    .button-container .one-column-btn, 
+    .button-container .two-column-btn
+    { 
+display: none;
+    }
+} 
+
+@media (max-width: 767px) {
+    .button-container .three-columns-btn,
+    .button-container .four-columns-btn {
+        display: none;
+    }
+}
+
