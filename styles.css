@@ -1,6 +1,7 @@
 /* mobile first */
 body {
     background-color: rgba(192, 207, 202, 0.703);
+    padding-top: 70px; /* gör att hero bild hamnar under header */ 
 }
 
 img {
@@ -11,7 +12,6 @@ img {
     /* Bevarar proportionerna */
     object-fit: cover;
     /* Klipper och fyller utan att ändra proportioner */
-    max-height: 300px;
 }
 
 
@@ -21,7 +21,7 @@ header {
     top: 0;
     left: 0;
     background-color: rgba(2, 60, 48, 0.791);
-    display: flex;/* Centrera vertikalt */
+    display: flex;
     justify-content: space-between;
 }
 
@@ -87,16 +87,12 @@ flex-direction: column;
 }
 
 
-#menu {
-    display: absolute;
-   
-    transition: 2s ease-in;
-}
-
 #menu.active ul {
     display: block; 
     height: 100vh;
     width: 100vw;
+  
+
 }
 
 #menu ul {
@@ -115,8 +111,10 @@ flex-direction: column;
 
 
 .hero {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    height: 60vh;
+    display: flex; 
+    width: 100%;
+   object-fit: cover;
 }
 
 
@@ -135,6 +133,7 @@ div.scroll-container {
   div.scroll-container img {
     padding: 10px;
     max-height: 30vh;
+    max-width: 200px;
     height: auto;
     /* Bevarar proportionerna */
     object-fit: cover;
@@ -148,6 +147,8 @@ div.scroll-container {
     gap: 20px;
     text-align: center;
     justify-content: center;
+    padding: 10px;
+
 }
 
 .card {
@@ -155,6 +156,19 @@ div.scroll-container {
     height: auto;
     flex: 1 1 calc(50% - 20px); /* Standard: 2 kolumner */
 }
+
+.card_container img
+{
+height: 300px; /* sätter fast höjd på bilderna i huvudlayouten */ 
+object-fit: cover;
+width: 100%;
+}
+
+.card_container.one-column img
+{
+height: auto; /* gör att bilderna inte påverkas vid en kolumn layout */
+}
+
 
 .text_kort {
     display: flex;
@@ -176,6 +190,7 @@ footer {
     align-items: flex-start;
     gap: 8px;
 }
+
 
 
 /* Klass för att ändra till 1 kolumn */
@@ -216,6 +231,13 @@ button:hover {
     background-color: rgb(4, 90, 72);
 }
 
+@media (max-width: 767px) {
+    .button-container .three-columns-btn,
+    .button-container .four-columns-btn {
+        display: none;
+    }
+}
+
 /* 3 kolumner (syns bara på tablet & desktop) */
 @media (min-width: 768px) {
     .card_container .card {
@@ -243,10 +265,5 @@ display: none;
     }
 } 
 
-@media (max-width: 767px) {
-    .button-container .three-columns-btn,
-    .button-container .four-columns-btn {
-        display: none;
-    }
-}
+
 
