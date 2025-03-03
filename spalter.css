@@ -1,0 +1,36 @@
+.card_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) ; /* Standard: 2 kolumner */
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+/* Knapp-styling */
+.button-container {
+    margin: 20px;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: rgb(2, 60, 48);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: rgb(4, 90, 72);
+}
+
+
+.container.one-column {
+    grid-template-columns: 1fr;
+}
+
+
+
+
+
+
