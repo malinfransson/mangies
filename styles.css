@@ -164,6 +164,7 @@ main {
 
 /*styling för footer*/ 
 footer {
+    position: relative; /* Ändrad från fixed till relative */
     bottom: 0;
     width: 100%;
     padding: 20px;
@@ -172,6 +173,12 @@ footer {
     align-items: flex-start;
     gap: 8px;
     box-sizing: border-box; /* Inkluderar padding i höjden */
+    height: 80%; /* Ställer in höjden */
+    background-color: rgba(192, 207, 202, 0.703); /* Bakgrundsfärg */
+}
+
+footer p {
+    color: rgba(2, 60, 48, 0.791);
 }
 
 footer a {
