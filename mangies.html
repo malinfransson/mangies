@@ -8,15 +8,13 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="hamburger.css">
     <script src="menu.js"> </script>
-    <script>
-        function toggleActive(elementId) {
-            document.getElementById(elementId).classList.toggle("active");
-        }
-    </script>
+    <script src="spalter.js"> </script>
+  
 </head>
 
 <body>
     <header>
+
         
         <nav id="menu">
             <div id="hamburger" onclick="toggleActive('menu')">
@@ -34,8 +32,8 @@
         </div>
         </nav>
 
-        <div class="namn_container">
-            <div class="namn">
+        <div class="header_container">
+            <div id="namn">
                 <p>MANGIES</p>
             </div>
 
@@ -54,6 +52,7 @@
         </div>
 
     </header>
+  
 
     <div id="wrapper">
         <main>
@@ -61,8 +60,25 @@
                 <img src="malicki-m-beser-PKMvkg7vnUo-unsplash.jpg" alt="overstbild">
             </div>
 
-            <div class="container">
-                <div class="card"> <!--fixa sen -->
+            <div class="scroll-container">
+                <img src="mina-rad-ioCYSvwcBlc-unsplash.jpg" alt="Cinque Terre" width="200">
+                <img src="oladimeji-odunsi-aU_eOcelLhQ-unsplash.jpg" alt="Forest" width="200">
+                <img src="malicki-m-beser-PKMvkg7vnUo-unsplash.jpg" alt="Northern Lights" width="200">
+                <img src="chyntia-juls-HlVjI5WmoQY-unsplash.jpg" alt="Mountains" width="200">
+              </div>
+
+    
+            <div class="button-container">
+                <button class="one-column-btn" onclick="changeColumns(1)">1 Kolumn</button>
+                <button class="two-column-btn" onclick="changeColumns(2)">2 Kolumner</button>
+                <button class="three-columns-btn" onclick="changeColumns(3)">3 Kolumner</button>
+                <button class="four-columns-btn" onclick="changeColumns(4)">4 Kolumner</button>
+            </div>
+            
+
+                <div class="card_container">
+           
+                <div class="card">  <!--fixa sen -->
                     <img src="chyntia-juls-HlVjI5WmoQY-unsplash.jpg" alt="kavaj">
 
                     <div class="text_kort"> <!--fixa sen -->
@@ -77,7 +93,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card"> 
                     <img src="mina-rad-ioCYSvwcBlc-unsplash.jpg" alt="t-shirt">
                     <div class="text_kort">
                         t-shirts
@@ -100,9 +116,10 @@
                     <p>
                         kort pa klader
                     </p>
-
                 </div>
             </div>
+      
+    </div>
         </main>
     </div>
 
