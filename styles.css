@@ -1,7 +1,15 @@
 /* mobile first */
 body {
     background-color: rgba(192, 207, 202, 0.703);
-    padding-top: 70px; /* gör att hero bild hamnar under header */ 
+    padding-top: 75px; /* gör att hero bild hamnar under header */ 
+}
+
+h2
+{
+color: #fff;
+font-stretch: expanded;
+margin-bottom: 2%;
+margin-top: 5vh;
 }
 
 img {
@@ -91,7 +99,6 @@ flex-direction: column;
     display: block; 
     height: 100vh;
     width: 100vw;
-  
 
 }
 
@@ -107,6 +114,7 @@ flex-direction: column;
 
 #menu li a {
     color: #ffff;
+    
 }
 
 
@@ -132,7 +140,7 @@ div.scroll-container {
  
   div.scroll-container img {
     padding: 10px;
-    max-height: 30vh;
+    max-height: 40vh;
     max-width: 200px;
     height: auto;
     /* Bevarar proportionerna */
@@ -231,13 +239,6 @@ button:hover {
     background-color: rgb(4, 90, 72);
 }
 
-@media (max-width: 767px) {
-    .button-container .three-columns-btn,
-    .button-container .four-columns-btn {
-        display: none;
-    }
-}
-
 /* 3 kolumner (syns bara på tablet & desktop) */
 @media (min-width: 768px) {
     .card_container .card {
@@ -251,7 +252,19 @@ button:hover {
     { 
 display: none;
     }
+
+.hero {
+height: auto;
     }
+
+.card_container img { 
+
+    height: 400px;
+
+} 
+
+
+} 
 
 /* 4 kolumner (syns bara på stora skärmar) */
 @media (min-width: 1024px) {
@@ -265,5 +278,10 @@ display: none;
     }
 } 
 
-
+@media (max-width: 767px) {
+    .button-container .three-columns-btn,
+    .button-container .four-columns-btn {
+        display: none;
+    }
+}
 
