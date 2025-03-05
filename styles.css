@@ -1,8 +1,7 @@
 /* mobile first */
 body {
     background-color: rgba(192, 207, 202, 0.703);
-    padding-top: 75px;
-    /* gör att hero bild hamnar under header */
+    padding-top: 75px; /* gör att hero bild hamnar under header */
 }
 
 h2 {
@@ -14,12 +13,9 @@ h2 {
 
 img {
     display: block;
-    width: 100%;
-    /* Fyller förälderelementet */
-    height: auto;
-    /* Bevarar proportionerna */
-    object-fit: cover;
-    /* Klipper och fyller utan att ändra proportioner */
+    width: 100%; /* Fyller förälderelementet */
+    height: auto; /* Bevarar proportionerna */
+    object-fit: cover; /* Klipper och fyller utan att ändra proportioner */
 }
 
 
@@ -31,6 +27,7 @@ header {
     background-color: rgba(2, 60, 48, 0.791);
     display: flex;
     justify-content: space-between;
+    z-index: 2; /* menyn lägger sig över allt annat vid scroll*/
 }
 
 
@@ -48,7 +45,7 @@ header {
     align-self: center;
 }
 
-
+/* styling för hamburger-menyn*/ 
 #hamburger {
     margin: 10px;
     flex: 1;
@@ -60,58 +57,6 @@ header {
     margin-right: 5%;
 }
 
-
-/* Styling för sökfältet */
-
-#searchForm {
-    position: relative;
-    display: flex;
-    align-items: center;  /* Vertikal centrering */
-    width: 60%;  /* Justera bredden på hela sökfältet */
-}
-
-input[type="text"] {
-    flex: 1;
-    float: right;
-    margin: 10px;
-    padding: 5px;
-    border: none;
-    font-size: 12pt;
-    border-radius: 30px;
-    /* rundar hörnen */
-    background-color: #fff;
-    /* bakgrundsfärg */
-    height: 50%;
-    width: 30vw;
-}
-
-button#searchBtn {
-    position: absolute;
-    right: 10px; /* Placera knappen till höger inom input-fältet */
-    padding: 10px 15px;
-    background-color: #2f8f7f;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-button#searchBtn:hover {
-    background-color: #207b63;
-}
-
-
-
-#ikoner {
-    margin-left: auto;
-    /* Skjuter längst till höger */
-    margin-right: 5px;
-}
-
-.cart {
-    margin-right: 10px;
-    width: 25px;
-}
 
 #lista {
     display: flex;
@@ -141,6 +86,52 @@ button#searchBtn:hover {
 
 }
 
+/* Styling för sökfältet */
+#searchForm {
+    display: flex;
+    align-items: center;  /* vertikal centrering */
+    width: 100%; /* Justera bredden på hela sökfältet */
+}
+
+input[type="text"] {
+    flex: 1;
+    float: right;
+    margin: 10px;
+    padding: 5px;
+    border: none;
+    font-size: 12pt;
+    border-radius: 30px; /* rundar hörnen */
+    background-color: #fff; /* bakgrundsfärg */
+    height: 50%;
+    width: 30vw;
+}
+
+button#searchBtn {
+    right: 10px; /* Placera knappen till höger inom input-fältet */
+    padding: 10px 15px;
+    background-color: #2f8f7f;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+button#searchBtn:hover {
+    background-color: #207b63;
+}
+
+/* knappar längst till höger "gilla" & "varukorg"*/ 
+#ikoner {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Skjuter längst till höger */
+    margin-right: 5px;
+}
+
+.cart {
+    margin-right: 10px;
+    width: 25px;
+}
 
 .hero {
     height: 60vh;
@@ -166,10 +157,8 @@ div.scroll-container img {
     padding: 10px;
     max-height: 40vh;
     max-width: 200px;
-    height: auto;
-    /* Bevarar proportionerna */
-    object-fit: cover;
-    /* Klipper och fyller utan att ändra proportioner */
+    height: auto; /* Bevarar proportionerna */
+    object-fit: cover; /* Klipper och fyller utan att ändra proportioner */
 }
 
 .card_container {
@@ -184,10 +173,10 @@ div.scroll-container img {
 }
 
 .card {
+    position: relative; /* denna gör att hjärtanen kan ligga på*/ 
     width: 40%;
     height: auto;
-    flex: 1 1 calc(50% - 20px);
-    /* Standard: 2 kolumner */
+    flex: 1 1 calc(50% - 20px);/* Standard: 2 kolumner */
 }
 
 .card_container img {
