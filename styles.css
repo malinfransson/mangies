@@ -1,15 +1,15 @@
 /* mobile first */
 body {
     background-color: rgba(192, 207, 202, 0.703);
-    padding-top: 75px; /* gör att hero bild hamnar under header */ 
+    padding-top: 75px;
+    /* gör att hero bild hamnar under header */
 }
 
-h2
-{
-color: #fff;
-font-stretch: expanded;
-margin-bottom: 2%;
-margin-top: 5vh;
+h2 {
+    color: #fff;
+    font-stretch: expanded;
+    margin-bottom: 2%;
+    margin-top: 5vh;
 }
 
 img {
@@ -35,9 +35,9 @@ header {
 
 
 .header_container {
-   display: flex;
-   align-items: center;
-   justify-items: center;
+    display: flex;
+    align-items: center;
+    justify-items: center;
 }
 
 #namn {
@@ -45,7 +45,7 @@ header {
     color: rgba(202, 229, 223, 0.791);
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: large;
-align-self: center;
+    align-self: center;
 }
 
 
@@ -54,15 +54,22 @@ align-self: center;
     flex: 1;
 }
 
-.active #hamburger
-{
-float: right;
-padding: 2%;
-margin-right: 5%;
+.active #hamburger {
+    float: right;
+    padding: 2%;
+    margin-right: 5%;
 }
 
 
 /* Styling för sökfältet */
+
+#searchForm {
+    position: relative;
+    display: flex;
+    align-items: center;  /* Vertikal centrering */
+    width: 60%;  /* Justera bredden på hela sökfältet */
+}
+
 input[type="text"] {
     flex: 1;
     float: right;
@@ -78,8 +85,26 @@ input[type="text"] {
     width: 30vw;
 }
 
+button#searchBtn {
+    position: absolute;
+    right: 10px; /* Placera knappen till höger inom input-fältet */
+    padding: 10px 15px;
+    background-color: #2f8f7f;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+button#searchBtn:hover {
+    background-color: #207b63;
+}
+
+
+
 #ikoner {
-    margin-left: auto;/* Skjuter längst till höger */
+    margin-left: auto;
+    /* Skjuter längst till höger */
     margin-right: 5px;
 }
 
@@ -88,15 +113,14 @@ input[type="text"] {
     width: 25px;
 }
 
-#lista
-{
-display: flex;
-flex-direction: column;
+#lista {
+    display: flex;
+    flex-direction: column;
 }
 
 
 #menu.active ul {
-    display: block; 
+    display: block;
     height: 100vh;
     width: 100vw;
 
@@ -114,15 +138,15 @@ flex-direction: column;
 
 #menu li a {
     color: #ffff;
-    
+
 }
 
 
 .hero {
     height: 60vh;
-    display: flex; 
+    display: flex;
     width: 100%;
-   object-fit: cover;
+    object-fit: cover;
 }
 
 
@@ -131,14 +155,14 @@ main {
 }
 
 div.scroll-container {
-    display: flex; 
+    display: flex;
     border: 1px solid black;
     overflow: auto;
     white-space: nowrap;
     padding: 10px;
 }
- 
-  div.scroll-container img {
+
+div.scroll-container img {
     padding: 10px;
     max-height: 40vh;
     max-width: 200px;
@@ -146,7 +170,7 @@ div.scroll-container {
     /* Bevarar proportionerna */
     object-fit: cover;
     /* Klipper och fyller utan att ändra proportioner */
-  }
+}
 
 .card_container {
     display: flex;
@@ -162,19 +186,20 @@ div.scroll-container {
 .card {
     width: 40%;
     height: auto;
-    flex: 1 1 calc(50% - 20px); /* Standard: 2 kolumner */
+    flex: 1 1 calc(50% - 20px);
+    /* Standard: 2 kolumner */
 }
 
-.card_container img
-{
-height: 300px; /* sätter fast höjd på bilderna i huvudlayouten */ 
-object-fit: cover;
-width: 100%;
+.card_container img {
+    height: 300px;
+    /* sätter fast höjd på bilderna i huvudlayouten */
+    object-fit: cover;
+    width: 100%;
 }
 
-.card_container.one-column img
-{
-height: auto; /* gör att bilderna inte påverkas vid en kolumn layout */
+.card_container.one-column img {
+    height: auto;
+    /* gör att bilderna inte påverkas vid en kolumn layout */
 }
 
 
@@ -188,17 +213,39 @@ height: auto; /* gör att bilderna inte påverkas vid en kolumn layout */
     height: 30px;
 }
 
-
+/*styling på footer*/
 footer {
     bottom: 0;
     width: 100%;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
+    background-color: (192, 207, 202, 0.703);
 }
 
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: warp;
+    gap: 20px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+footer h3 {
+    color: rgba(2, 60, 48, 0.791);
+}
+
+footer a {
+    text-decoration: none;
+    color: rgba(2, 60, 48, 0.791);
+}
+
+footer a:hover {
+    color: #ffffff;
+}
 
 
 /* Klass för att ändra till 1 kolumn */
@@ -221,12 +268,10 @@ footer {
     margin: 20px;
     display: flex;
     gap: 10px;
-   
-  
 }
 
 button {
-    padding: 10px ;
+    padding: 10px;
     background-color: rgb(2, 60, 48);
     color: white;
     border: none;
@@ -244,44 +289,43 @@ button:hover {
     .card_container .card {
         flex: 1 1 calc(33.33% - 20px);
     }
+
     .card_container.three-columns .card {
         flex: 1 1 calc(33.33% - 20px);
     }
-    .button-container .one-column-btn, 
-    .button-container .two-column-btn
-    { 
-display: none;
+
+    .button-container .one-column-btn,
+    .button-container .two-column-btn {
+        display: none;
     }
 
-.hero {
-height: auto;
+    .hero {
+        height: auto;
     }
 
-.card_container img { 
-
-    height: 400px;
-
-} 
+    .card_container img {
+        height: 400px;
+    }
 
 
-} 
+}
 
 /* 4 kolumner (syns bara på stora skärmar) */
 @media (min-width: 1024px) {
     .card_container.four-columns .card {
         flex: 1 1 calc(25% - 20px);
-    } 
-    .button-container .one-column-btn, 
-    .button-container .two-column-btn
-    { 
-display: none;
     }
-} 
+
+    .button-container .one-column-btn,
+    .button-container .two-column-btn {
+        display: none;
+    }
+}
 
 @media (max-width: 767px) {
+
     .button-container .three-columns-btn,
     .button-container .four-columns-btn {
         display: none;
     }
 }
-
