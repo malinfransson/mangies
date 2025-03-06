@@ -56,5 +56,18 @@ window.onload = function() {
 };
 
 
+function togglePopup() {
+  const popup = document.getElementById("popup");
+  popup.style.display = (popup.style.display === "block") ? "none" : "block";
+}
+
+// Stäng popup om användaren klickar utanför det
+window.onclick = function(event) {
+  const popup = document.getElementById("popup");
+  if (event.target === popup) {
+      popup.style.display = "none";
+  }
+};
+
 
 //kod för varukorg
