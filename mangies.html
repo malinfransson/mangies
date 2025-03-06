@@ -31,7 +31,7 @@
                 <li><a href="#accesoarer">Accesoarer</a></li>
             </ul>
         </nav>
-        
+
         <div class="header_container">
             <div id="namn">
                 <p>MANGIES</p>
@@ -44,11 +44,17 @@
 
             <div id="ikoner">
                 <div class="heart">
-                    <h2>&hearts;</h2>
-                    <ul id="liked-items">
-                        <!--Gillade plagg kommer att dyka upp här -->
-                    </ul>
+                    <h2 onklick="togglePopup()">&hearts;</h2>
+
                 </div>
+            </div>
+
+            <div class="popup">
+                <span class="close" onklick="togglePopup()">&times;</span>
+                <h3>Gillade produkter</h3>
+                <ul id="liked-items">
+                    <!--Gillade plagg kommer att dyka upp här -->
+                </ul>
             </div>
 
 
