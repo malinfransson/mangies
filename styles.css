@@ -75,6 +75,7 @@ header {
     display: none;
     list-style: none;
     text-align: center;
+   
 }
 
 #menu li {
@@ -83,7 +84,7 @@ header {
 
 #menu li a {
     color: #ffff;
-
+    text-decoration: none;
 }
 
 /* Styling för sökfältet */
