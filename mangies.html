@@ -7,49 +7,51 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="hamburger.css">
-    <script src="menu.js"> </script>
-    <script src="spalter.js"> </script>
-  
+    <link rel="stylesheet" href="icons.css">
+
 </head>
 
 <body>
     <header>
 
-        
+
         <nav id="menu">
             <div id="hamburger" onclick="toggleActive('menu')">
                 <div class="hamburgerBar"></div>
                 <div class="hamburgerBar"></div>
                 <div class="hamburgerBar"></div>
             </div>
-            <ul>
-                <div id="lista">
-               
+            <ul id="lista">
+
                 <li><a href="#klanninar">Klänningar</a></li>
                 <li><a href="#byxor">Byxor</a></li>
                 <li><a href="#jeans">Jeans</a></li>
                 <li><a href="#kjolar">Kjolar</a></li>
                 <li><a href="#skor">Skor</a></li>
                 <li><a href="#accesoarer">Accesoarer</a></li>
-
-
             </ul>
-        </div>
         </nav>
-
+        
         <div class="header_container">
             <div id="namn">
                 <p>MANGIES</p>
             </div>
 
-            <input type="text" placeholder="Search.."> <!-- test för sökfält-->
+            <form id="searchForm" action="search_results.html" method="get">
+                <input type="text" placeholder="Search.." required> <!-- test för sökfält-->
+                <button type="submit">Sök</button>
+            </form>
 
             <div id="ikoner">
                 <div class="heart">
-                    <h2> &hearts;</h2>
+                    <h2>&hearts;</h2>
+                    <ul id="liked-items">
+                        <!--Gillade plagg kommer att dyka upp här -->
+                    </ul>
                 </div>
-
             </div>
+
+
             <div class="cart">
                 <img src="varukorg.png" alt="varukorg">
             </div>
@@ -57,7 +59,7 @@
         </div>
 
     </header>
-  
+
 
     <div id="wrapper">
         <main>
@@ -66,79 +68,115 @@
             </div>
 
             <h2> Populära kategorier </h2>
-            <div class="scroll-container"> 
-              <img src="mina-rad-ioCYSvwcBlc-unsplash.jpg" alt="Cinque Terre">
+            <div class="scroll-container">
+                <img src="mina-rad-ioCYSvwcBlc-unsplash.jpg" alt="Cinque Terre">
                 <img src="oladimeji-odunsi-aU_eOcelLhQ-unsplash.jpg" alt="Forest">
                 <img src="malicki-m-beser-PKMvkg7vnUo-unsplash.jpg" alt="Northern Lights">
-                <img src="chyntia-juls-HlVjI5WmoQY-unsplash.jpg" alt="Mountains" >
-                <img src="kyle-smith-tlowJ-oYAjU-unsplash.jpg" alt="underklader"> 
-                <img src="woman-6115105_1280.jpg" alt="klanning"> 
-              </div>
+                <img src="chyntia-juls-HlVjI5WmoQY-unsplash.jpg" alt="Mountains">
+                <img src="kyle-smith-tlowJ-oYAjU-unsplash.jpg" alt="underklader">
+                <img src="woman-6115105_1280.jpg" alt="klanning">
+            </div>
 
-    
+
             <div class="button-container">
                 <button class="one-column-btn" onclick="changeColumns(1)">1 Kolumn</button>
                 <button class="two-column-btn" onclick="changeColumns(2)">2 Kolumner</button>
                 <button class="three-columns-btn" onclick="changeColumns(3)">3 Kolumner</button>
                 <button class="four-columns-btn" onclick="changeColumns(4)">4 Kolumner</button>
             </div>
-            
 
-                <div class="card_container">
-           
-                <div class="card">  <!--fixa sen -->
+
+            <div class="card_container">
+
+                <div class="card"> <!--fixa sen -->
+                    <div class="heart-icon" onclick="toggleLike(this)">
+                        <span>&hearts;</span>
+                    </div>
                     <img src="chyntia-juls-HlVjI5WmoQY-unsplash.jpg" alt="kavaj">
 
                     <div class="text_kort"> <!--fixa sen -->
-                        kavaj <!--fixa sen -->
+                        <p class="product-name">Kavaj</p> <!--fixa sen -->
                     </div>
                 </div>
 
                 <div class="card">
+                    <div class="heart-icon" onclick="toggleLike(this)">
+                        <span>&hearts;</span>
+                    </div>
+
                     <img src="oladimeji-odunsi-aU_eOcelLhQ-unsplash.jpg" alt="accessoarer">
                     <div class="text_kort">
-                        accessoarer
+                        <p class="product-name">Accessoarer</p>
+
                     </div>
                 </div>
 
-                <div class="card"> 
+                <div class="card">
+                    <div class="heart-icon" onclick="toggleLike(this)">
+                        <span>&hearts;</span>
+                    </div>
+
                     <img src="mina-rad-ioCYSvwcBlc-unsplash.jpg" alt="t-shirt">
                     <div class="text_kort">
-                        t-shirts
+                        <p class="product-name">T-shirts</p>
+
                     </div>
                 </div>
 
                 <div class="card">
-                    <img src="kyle-smith-tlowJ-oYAjU-unsplash.jpg" alt="underklader"> 
-                   
+                    <div class="heart-icon" onclick="toggleLike(this)">
+                        <span>&hearts;</span>
+                    </div>
+
+                    <img src="kyle-smith-tlowJ-oYAjU-unsplash.jpg" alt="underklader">
+
                     <div class="text_kort">
-                       underkläder
+                        <p class="product-name">Underkläder</p>
+
                     </div>
                 </div>
 
                 <div class="card">
-                    <img src="woman-6115105_1280.jpg" alt="klanning"> 
+
+                    <div class="heart-icon" onclick="toggleLike(this)">
+                        <span>&hearts;</span>
+                    </div>
+                    <img src="woman-6115105_1280.jpg" alt="klanning">
                     <div class="text_kort">
-                     Klänningar
+                        <p class="product-name">Klänningar</p>
+
                     </div>
                 </div>
 
                 <div class="card">
                     <p>
-                        kort pa klader
+                        kort pa klader <!--vad ska vara här???-->
                     </p>
                 </div>
             </div>
-      
+
     </div>
-        </main>
+    </main>
     </div>
 
     <footer>
-        <a href="#länk">Instagram</a> <!-- OBS fixa länk här -->
-        <a href="#länk">TikTok</a> <!-- OBS fixa länk här -->
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Våra sociala medier:</h3>
+                <a href="https://www.instagram.com/mangies.brand">Instagram</a>
+                <a href="https://www.tiktok.com/@mangies.brand">TikTok</a>
+            </div>
+            <div class="footer-column">
+                <h3>Kontakt:</h3>
+                <a href="mailto:mangies@mail.com">Maila oss</a>
+                <a href="tel:+46735331355">Ring oss</a>
+            </div>
+        </div>
     </footer>
 
+    <script src="menu.js"></script> <!-- testar att lägga här för att det ska laddas korrekt-->
+    <script src="spalter.js"></script>
+    <script src="icons.js"></script>
 </body>
 
 </html>
