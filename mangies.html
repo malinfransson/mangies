@@ -44,26 +44,34 @@
 
             <div id="ikoner">
                 <div class="heart">
-                    <h2 onklick="togglePopup()">&hearts;</h2>
+                    <h2 onclick="togglePopup()">&hearts;</h2>
 
                 </div>
             </div>
 
-            <div class="popup">
-                <span class="close" onklick="togglePopup()">&times;</span>
+            <div id="popup"class="popup">
+                <span class="close" onclick="togglePopup()">&times;</span>
                 <h3>Gillade produkter</h3>
                 <ul id="liked-items">
                     <!--Gillade plagg kommer att dyka upp här -->
                 </ul>
             </div>
-
-
+            
+            <!-- kundkorgsikon i menyn --> <!--OBS FUNKAR EJ ÄNNU-->
             <div class="cart">
-                <img src="varukorg.png" alt="varukorg">
+                <div class="cart" onclick="toggleCartPopup()">
+                    <img src="varukorg.png" alt="varukorg">
+                </div>
             </div>
-        </div>
-        </div>
+            <!-- popup för varukorg -->
+            <div id="shopping-cart-popup" class="popup">
+                <span class="popup-close-btn" onclick="toggleCartPopup()">&times;</span>
+                <h3>Varukorg</h3>
+                <ul id="cart-products-list"></ul>
+                <button onclick="clearCart()">Töm varukorgen</button>
+            </div>
 
+        </div>
     </header>
 
 
@@ -102,7 +110,13 @@
 
                     <div class="text_kort"> <!--fixa sen -->
                         <p class="product-name">Kavaj</p> <!--fixa sen -->
+                        <p class="price">499 kr</p>
                     </div>
+                    <div class="add-to-cart-btn" onclick="addToCart(this)">
+                        +
+                    </div>
+
+
                 </div>
 
                 <div class="card">
@@ -113,7 +127,10 @@
                     <img src="oladimeji-odunsi-aU_eOcelLhQ-unsplash.jpg" alt="accessoarer">
                     <div class="text_kort">
                         <p class="product-name">Accessoarer</p>
-
+                        <p class="price">499 kr</p>
+                    </div>
+                    <div class="add-to-cart-btn" onclick="addToCart(this)">
+                        +
                     </div>
                 </div>
 
@@ -125,7 +142,10 @@
                     <img src="mina-rad-ioCYSvwcBlc-unsplash.jpg" alt="t-shirt">
                     <div class="text_kort">
                         <p class="product-name">T-shirts</p>
-
+                        <p class="price">499 kr</p>
+                    </div>
+                    <div class="add-to-cart-btn" onclick="addToCart(this)">
+                        +
                     </div>
                 </div>
 
@@ -138,7 +158,10 @@
 
                     <div class="text_kort">
                         <p class="product-name">Underkläder</p>
-
+                        <p class="price">499 kr</p>
+                    </div>
+                    <div class="add-to-cart-btn" onclick="addToCart(this)">
+                        +
                     </div>
                 </div>
 
@@ -150,7 +173,10 @@
                     <img src="woman-6115105_1280.jpg" alt="klanning">
                     <div class="text_kort">
                         <p class="product-name">Klänningar</p>
-
+                        <p class="price">499 kr</p>
+                    </div>
+                    <div class="add-to-cart-btn" onclick="addToCart(this)">
+                        +
                     </div>
                 </div>
 
