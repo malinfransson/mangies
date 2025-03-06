@@ -274,7 +274,7 @@ button:hover {
 }
 
 /* 3 kolumner (syns bara på tablet & desktop) */
-@media (min-width: 768px) {
+@media (min-width: 768px) { 
     .card_container .card {
         flex: 1 1 calc(33.33% - 20px);
     }
@@ -292,19 +292,13 @@ button:hover {
         height: auto;
     }
 
-<<<<<<< HEAD
 .card_container img { 
     height: 500px;
 
 } 
-=======
-    .card_container img {
-        height: 400px;
-    }
->>>>>>> 5500466118fc77fffb8e6dc8466ba86983e5f7ae
 
+} 
 
-}
 
 /* 4 kolumner (syns bara på stora skärmar) */
 @media (min-width: 1024px) {
