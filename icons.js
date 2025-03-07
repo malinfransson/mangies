@@ -93,6 +93,10 @@ window.onload = function() {
 // varukorg
 // ===========================
 
+// ===========================
+// Varukorg
+// ===========================
+
 // Lägger till produkt i varukorgen
 function addToCart(element) {
   const productCard = element.closest('.card');
@@ -111,8 +115,45 @@ function addToCart(element) {
   // Spara uppdaterad varukorg
   localStorage.setItem("cart", JSON.stringify(cart));
 
+  // Uppdatera popupen direkt
+  updateCartPopup();
+
   alert(`${productName} har lagts till i varukorgen!`);
 }
 
-// kalla på denna funktion när sidan laddas för att visa varukorgens innehåll
+// Funktion för att visa eller dölja varukorgens popup
+function toggleCartPopup() {
+  const cartPopup = document.getElementById("shopping-cart-popup");
+
+  // Växla synlighet genom att ändra display
+  if (cartPopup.style.display === "none" || cartPopup.style.display === "") {
+      cartPopup.style.display = "block";
+  } else {
+      cartPopup.style.display = "none";
+  }
+}
+
+// Funktion för att uppdatera varukorgens popup
+function updateCartPopup() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartList = document.getElementById("cart-products-list");
+
+    // Töm nuvarande innehåll
+    cartList.innerHTML = "";
+
+    // Lägg till varje produkt i listan
+    cart.forEach(product => {
+        const li = document.createElement("li");
+        li.textContent = `${product.name} - ${product.price}`;
+        cartList.appendChild(li);
+    });
+}
+
+// Funktion för att tömma varukorgen
+function clearCart() {
+    localStorage.removeItem("cart"); // Tar bort varukorgen från localStorage
+    updateCartPopup(); // Uppdatera popupen så att den blir tom
+}
+
+// Uppdatera varukorgen vid sidladdning
 window.onload = updateCartPopup;
