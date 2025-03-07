@@ -61,7 +61,7 @@ header {
 }
 
 
-/* Döljer #namn när menyn är aktiv */
+/* döljer #namn när menyn är aktiv */
 #menu.active ~ .header_container #namn {
     display: none;
 }
