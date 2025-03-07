@@ -41,11 +41,12 @@ header {
     flex: 1;
     color: rgba(202, 229, 223, 0.791);
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: large;
+    font-size:x-large; 
     position: fixed;
     left: 50%;
     transform: translateX(-50%); /* Centrerar namnet */
 }
+
 
 /* styling för hamburger-menyn*/ 
 #hamburger {
@@ -59,6 +60,13 @@ header {
     margin-right: 5%;
 }
 
+
+/* Döljer #namn när menyn är aktiv */
+#menu.active ~ .header_container #namn {
+    display: none;
+}
+
+  
 
 #lista {
     display: flex;
@@ -183,8 +191,7 @@ div.scroll-container img {
 }
 
 .card_container img {
-    height: 300px;
-    /* sätter fast höjd på bilderna i huvudlayouten */
+    height: 300px; /* sätter fast höjd på bilderna i huvudlayouten */
     object-fit: cover;
     width: 100%;
 }
@@ -262,7 +269,6 @@ margin-bottom: 10px;
     display: flex;
     gap: 10px;
     flex-direction: row-reverse; /* Gör att knapparna hamnar längst till höger */ 
-  
 }
 
 button {
@@ -278,6 +284,11 @@ button {
 
 button:hover {
     background-color: rgb(4, 90, 72);
+}
+
+button.active {
+    color: #207b63;
+    font-weight: bold;
 }
 
 /* 3 kolumner (syns bara på tablet & desktop) */
@@ -300,8 +311,7 @@ button:hover {
     }
 
 .card_container img { 
-    height: 500px;
-
+    height: 400px;
 } 
 
 } 
@@ -309,6 +319,9 @@ button:hover {
 
 /* 4 kolumner (syns bara på stora skärmar) */
 @media (min-width: 1024px) {
+    .card_container .card {
+        flex: 1 1 calc(25% - 20px);
+    }
     .card_container.four-columns .card {
         flex: 1 1 calc(25% - 20px);
     }
@@ -316,6 +329,11 @@ button:hover {
     .button-container .one-column-btn,
     .button-container .two-column-btn {
         display: none;
+    }
+
+    #hamburger
+    {
+    display: none;
     }
 }
 
@@ -329,7 +347,5 @@ button:hover {
     input[type="text"] {
         width: 20vw;
     }
-    
-
 
 }
