@@ -27,7 +27,8 @@ color: rgba(202, 229, 223, 0.791);
     transform-origin: center;
     transform: rotate(-45deg); 
   }
-  
+
+
   /* Fade out the second bar */
   .active #hamburger .hamburgerBar:nth-child(2) {
     opacity: 0;
