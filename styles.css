@@ -42,7 +42,9 @@ header {
     color: rgba(202, 229, 223, 0.791);
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: large;
-    align-self: center;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%); /* Centrerar namnet */
 }
 
 /* styling för hamburger-menyn*/ 
@@ -255,9 +257,12 @@ footer a:hover {
 
 /* Styling för knapparna */
 .button-container {
-    margin: 20px;
+margin-top:30px; 
+margin-bottom: 10px;
     display: flex;
     gap: 10px;
+    flex-direction: row-reverse; /* Gör att knapparna hamnar längst till höger */ 
+  
 }
 
 button {
@@ -267,6 +272,7 @@ button {
     border: none;
     cursor: pointer;
     border-radius: 5px;
+
 
 }
 
@@ -319,4 +325,11 @@ button:hover {
     .button-container .four-columns-btn {
         display: none;
     }
+
+    input[type="text"] {
+        width: 20vw;
+    }
+    
+
+
 }
