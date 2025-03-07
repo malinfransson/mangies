@@ -197,8 +197,7 @@ div.scroll-container img {
 }
 
 .card_container.one-column img {
-    height: auto;
-    /* gör att bilderna inte påverkas vid en kolumn layout */
+    height: auto; /* gör att bilderna inte påverkas vid en kolumn layout */
 }
 
 
@@ -318,7 +317,7 @@ button.active {
 
 
 /* 4 kolumner (syns bara på stora skärmar) */
-@media (min-width: 1024px) {
+@media (min-width: 924px) {
     .card_container .card {
         flex: 1 1 calc(25% - 20px);
     }
@@ -331,9 +330,52 @@ button.active {
         display: none;
     }
 
-    #hamburger
-    {
-    display: none;
+
+    #menu {
+        position: fixed; /* Fixera menyn */
+        height: 100vh;
+        width: 250px; /* Sätt en fast bredd på menyn */
+        background-color: rgba(2, 60, 48, 0.791);
+        margin-top: 30px;
+    }
+
+    #menu ul {
+        display: block; /* Visa menyn hela tiden */
+        padding: 20px 0;
+        list-style: none;
+        text-align: left;
+    }
+
+    #menu li {
+        padding: 15px;
+    }
+
+    #menu li a {
+        color: white;
+        text-decoration: none;
+        display: block;
+    }
+
+    /* Justering för headern så att innehållet inte ligger under menyn */
+    .header_container {
+        display: flex;
+        
+    }
+
+    #namn {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%); /* Behåller centrerad stil */
+        z-index: 100; /* Gör att namnet ligger ovanpå */
+    }
+
+    /* Justering för hamburger-knappen, dölja den när menyn är fast */
+    #hamburger {
+        display: none;
+    }
+
+    main {
+        margin-left: 250px; /* Gör plats för den fasta menyn */
     }
 }
 
