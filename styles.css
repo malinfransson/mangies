@@ -308,6 +308,7 @@ button.active {
 
 .card_container img { 
     height: 400px;
+ 
 } 
 
 } 
@@ -334,7 +335,7 @@ button.active {
     #menu {
         position: fixed; /* Fixera menyn */
         height: 100vh;
-        width: 250px; /* Sätt en fast bredd på menyn */
+        width: 200px; /* Sätt en fast bredd på menyn */
         background-color: rgba(2, 60, 48, 0.791);
         margin-top: 30px;
     }
@@ -356,10 +357,16 @@ button.active {
         display: block;
     }
 
+    header
+    {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
     /* Justering för headern så att innehållet inte ligger under menyn */
     .header_container {
-        display: flex;
-        
+      
     }
 
     #namn {
@@ -375,8 +382,18 @@ button.active {
     }
 
     main {
-        margin-left: 250px; /* Gör plats för den fasta menyn */
+        margin-left: 200px; /* Gör plats för den fasta menyn */
     }
+
+    .footer-column
+    {
+        margin-left: 200px; /* Gör plats för den fasta menyn */
+    }
+
+
+    .card image { 
+        flex-wrap: wrap;
+        } 
 }
 
 @media (max-width: 767px) {
@@ -389,5 +406,7 @@ button.active {
     input[type="text"] {
         width: 20vw;
     }
+
+
 
 }
