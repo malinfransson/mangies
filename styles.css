@@ -178,9 +178,9 @@ div.scroll-container img {
     background-color: #ffff;
     gap: 20px;
     text-align: center;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 10px;
-
+    align-items: flex-start;
 }
 
 .card {
@@ -277,8 +277,6 @@ button {
     border: none;
     cursor: pointer;
     border-radius: 5px;
-
-
 }
 
 button:hover {
@@ -305,18 +303,18 @@ button.active {
         display: none;
     }
 
+    .card_container img
+    {
+    height: 300px; 
+    }
+
     .hero {
         height: auto;
     }
 
-.card_container img { 
-    height: 500px;
-} 
-
 input[type="text"] {
     width: 20vw;
 }
-
 } 
 
 
@@ -328,12 +326,18 @@ input[type="text"] {
     .card_container.four-columns .card {
         flex: 1 1 calc(25% - 20px);
     }
-
+    
     .button-container .one-column-btn,
     .button-container .two-column-btn {
         display: none;
     }
-#namn{ 
+
+    .card_container img
+    {
+    height: 250px;
+    }
+
+#namn { 
     left: 50%;
     transform: translateX(-50%); /* Centrerar namnet */
 }
@@ -351,7 +355,6 @@ input[type="text"] {
         padding: 20px 0;
         list-style: none;
         text-align: left;
-       
     }
 
     #menu li {
@@ -369,10 +372,9 @@ input[type="text"] {
     position:fixed; 
     width: 100%;
     flex-wrap: wrap;
-    
     }
 
-    /* Justering för headern så att innehållet inte ligger under menyn */
+    /* Justering för headern så att innehållet ligger till höger */ 
     .header_container {
 margin-left: auto;
     }
@@ -393,22 +395,17 @@ margin-left: auto;
         margin-left: 200px; /* Gör plats för den fasta menyn */
     }
 
+
     .footer-column
     {
     margin-left: 200px; /* Gör plats för den fasta menyn */
     }
-
-    .card_container img{ 
-        height: 300px;
-        } 
-    
 }
 
 @media (max-width: 767px) {
-
     .button-container .three-columns-btn,
     .button-container .four-columns-btn {
-        display: none;
+        display: none; 
     }
 
 }
