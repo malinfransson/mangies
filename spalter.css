@@ -24,7 +24,6 @@ button:hover {
     background-color: rgb(4, 90, 72);
 }
 
-
 .container.one-column {
     grid-template-columns: 1fr;
 }
