@@ -58,12 +58,12 @@
 /*varukorg*/
 .add-to-cart-btn {
   position: absolute;
-  bottom: 4px; /* Placera knappen 10px från botten av .text_kort */
-  right: 10px; /* Placera knappen 10px från högerkanten */
-  font-size: 18pt; /* Justera storleken på texten för att passa */
+  bottom: 4px; /* placera knappen 10px från botten av .text_kort */
+  right: 10px; /* placera knappen 10px från högerkanten */
+  font-size: 18pt; /* justera storleken på texten för att passa */
   cursor: pointer;
   color: white;
-  transition: background-color 0.3s; /* Smooth transition vid hover */
+  transition: background-color 0.3s; /* smooth transition vid hover */
 }
 
 .add-to-cart-btn:hover {
