@@ -114,5 +114,5 @@ function addToCart(element) {
   alert(`${productName} har lagts till i varukorgen!`);
 }
 
-// Kalla på denna funktion när sidan laddas för att visa varukorgens innehåll
+// kalla på denna funktion när sidan laddas för att visa varukorgens innehåll
 window.onload = updateCartPopup;
