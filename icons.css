@@ -69,3 +69,32 @@
 .add-to-cart-btn:hover {
   color: rgba(192, 207, 202, 0.703);
 }
+
+.popup {
+  position: fixed;
+  left: 78%;
+  top: 15%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  width: 200px; /* Justera bredd efter behov */
+  max-width: 50%;
+  z-index: 1000;
+}
+
+.popup-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.popup-close-btn:hover {
+  color: red; /* Gör krysset rött vid hover */
+}
