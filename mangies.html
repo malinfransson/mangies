@@ -58,12 +58,12 @@
             
             <!-- kundkorgsikon i menyn --> <!--OBS FUNKAR EJ ÄNNU-->
             <div class="cart">
-                <div class="cart" onclick="toggleCartPopup()">
+                <div class="cart-icon" onclick="toggleCartPopup()">
                     <img src="varukorg.png" alt="varukorg">
                 </div>
             </div>
             <!-- popup för varukorg -->
-            <div id="shopping-cart-popup" class="popup">
+            <div id="shopping-cart-popup" class="popup" style="display: none;">
                 <span class="popup-close-btn" onclick="toggleCartPopup()">&times;</span>
                 <h3>Varukorg</h3>
                 <ul id="cart-products-list"></ul>
