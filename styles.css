@@ -1,7 +1,7 @@
 /* mobile first */
 body {
     background-color: rgba(192, 207, 202, 0.703);
-    padding-top: 75px; /* gör att hero bild hamnar under header */
+    padding-top: 5rem; /* gör att hero bild hamnar under header */
 }
 
 h2 {
@@ -111,7 +111,8 @@ input[type="text"] {
     border-radius: 30px; /* rundar hörnen */
     background-color: #fff; /* bakgrundsfärg */
     height: 50%;
-    width: 30vw;
+    width: 80%;
+    max-width: 300px;
 }
 
 button#searchBtn {
@@ -137,12 +138,14 @@ button#searchBtn:hover {
 }
 
 .cart {
-    margin-right: 10px;
-    width: 25px;
+    margin-right: 2vw;
+    width: 2rem;
+    max-width: 40px;
 }
 
 .hero {
     height: 60vh;
+    min-height: 200px;
     display: flex;
     width: 100%;
     object-fit: cover;
