@@ -42,9 +42,6 @@ header {
     color: rgba(202, 229, 223, 0.791);
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size:x-large; 
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%); /* Centrerar namnet */
 }
 
 
@@ -329,7 +326,10 @@ button.active {
     .button-container .two-column-btn {
         display: none;
     }
-
+#namn{ 
+    left: 50%;
+    transform: translateX(-50%); /* Centrerar namnet */
+}
 
     #menu {
         position: fixed; /* Fixera menyn */
