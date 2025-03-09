@@ -50,6 +50,10 @@
   cursor: pointer;
 }
 
+.heart-icon:hover{
+  color: red;
+}
+
 .heart-icon.liked {
   color: red;  /* fyllt hjärtat*/
 }
@@ -89,7 +93,6 @@
   top: 1rem;
   right: 1.5rem;
   font-size: 24px;
-  font-weight: bold;
   color: black;
   cursor: pointer;
   transition: color 0.3s ease;
