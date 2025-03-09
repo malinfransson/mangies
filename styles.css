@@ -63,7 +63,6 @@ header {
     display: none;
 }
 
-  
 
 #lista {
     display: flex;
@@ -75,14 +74,12 @@ header {
     display: block;
     height: 100vh;
     width: 100vw;
-
 }
 
 #menu ul {
     display: none;
     list-style: none;
     text-align: center;
-   
 }
 
 #menu li {
@@ -258,7 +255,9 @@ footer a:hover {
 
 /* Klass för att ändra till 4 kolumner */
 .card_container.four-columns .card {
-    flex: 1 1 calc(25% - 20px);
+    flex: 1 1 calc(25% - 15px);
+    max-width: calc(25% - 15px);
+    box-sizing: border-box;
 }
 
 /* Styling för knapparna */
