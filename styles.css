@@ -144,17 +144,19 @@ main {
 }
 
 .scroll-container {
+    position: relative;
     white-space: nowrap;
     overflow-x: scroll;
     border: 1px solid black;
     padding: 20px;
+    
 }
 
 .image-container {
     display: inline-block;
     position: relative;
     width: 200px;
-height: 35vh;
+   height: 35vh;
     margin-right: 10px;
 }
 
@@ -170,6 +172,29 @@ height: 35vh;
 display: none;
 }
 
+
+
+
+
+.scroll-btn {
+    position: sticky;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+}
+
+.scroll-btn.left {
+    left: 10px;
+}
+
+.scroll-btn.right {
+    right: 10px;
+}
 
 
 .card_container {
@@ -347,10 +372,10 @@ input[type="text"] {
 /* 4 kolumner (syns bara på stora skärmar) */
 @media (min-width: 924px) {
     .card_container .card {
-        flex: 1 1 calc(25% - 20px);
+        flex: 1 1 calc(25% - 15px);
     }
     .card_container.four-columns .card {
-        flex: 1 1 calc(25% - 20px);
+        flex: 1 1 calc(25% - 15px);
     }
 
     .button-container .one-column-btn,
@@ -420,6 +445,7 @@ margin-left: auto;
     main {
         margin-left: 200px; /* Gör plats för den fasta menyn */
     }
+
 
 
     .footer-column
