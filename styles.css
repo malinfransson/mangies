@@ -173,16 +173,14 @@ main {
 }
 
 .overlay {
-    display: none;
-}
-
-
+text-align: center;
+} 
 
 
 
 .scroll-btn {
     position: sticky;
-    transform: translateY(-50%);
+    transform: translateY(-200%);
     background: rgba(0, 0, 0, 0.5);
     color: white;
     font-size: 30px;
