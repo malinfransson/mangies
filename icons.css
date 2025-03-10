@@ -1,15 +1,25 @@
 /* styling för hjärtan*/
 
 /*styling på endast hjärtat i menyn*/
-.heart {  
-  position: relative;
-  padding-left: 10px;
+.heart-container {
+  display: flex;
+  justify-content: center; /* Centrerar innehållet horisontellt */
+  align-items: center; /* Vertikal centrering om det behövs */
 }
 
-.heart h2{
+.heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: fit-content;
+  text-align: center;
   font-size: 25pt;
   cursor: pointer;
+  color:  white; 
+  padding: 5px; 
 }
+
 
 .popup {
   display: none;
