@@ -1,8 +1,8 @@
 /* styling för hjärtan*/
 
-/*styling på endast hjärtat i menyn*/
-.heart {  
-  padding-left: 10px; 
+  /*styling på endast hjärtat i menyn*/
+.heart {
+  padding-left: 10px;
 }
 
 .heart {
@@ -14,17 +14,52 @@
   text-align: center;
   font-size: 25pt;
   cursor: pointer;
-  color:  white; 
-  padding: 5px; 
+  color: white;
+  padding: 5px;
+}
+
+  /*styling för hjärtan på plagg*/
+.heart-icon {
+  position: absolute;
+  top: 2px;
+  right: 10px;
+  font-size: 40px;
+  color: white; 
+  cursor: pointer;
+}
+
+.heart-icon:hover {
+  color: red;
+}
+
+.heart-icon.liked {
+  color: red; /* fyllt hjärtat*/
 }
 
 
+/*styling för varukorg*/
+.add-to-cart-btn {
+  position: absolute;
+  bottom: 4px; /* placera +knappen 10px från botten*/
+  right: 10px; /* placera +knappen 10px från högerkanten*/
+  font-size: 18pt;/* justera storleken på texten för att passa */
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s; /* smooth transition vid hover */
+}
+
+.add-to-cart-btn:hover {
+  color: rgba(192, 207, 202, 0.703);
+}
+
+
+/* styling för popup-fönster i hjärta (gillade produkter) och varukorg*/ 
 .popup {
   display: none;
   position: fixed;
   left: 75%;
-  top: 15%;
-  transform: translate(-50%, -50%);
+  top: 4rem;
+  transform: translateX(-50%);
   width: 200px;
   background-color: white;
   border: 2px solid #ddd;
@@ -48,64 +83,19 @@
 }
 
 
-/*styling för hjärtan på plagg*/ 
-.heart-icon {       
-  position: absolute;
-  top: 2px;
-  right: 10px;
-  font-size: 40px;
-  color: white; /* färgen på oifyllt hjärta (grått) */
-  cursor: pointer;
-}
-
-.heart-icon:hover{
-  color: red;
-}
-
-.heart-icon.liked {
-  color: red;  /* fyllt hjärtat*/
+/*icon styling tablet*/ 
+@media (min-width: 768px){
+  .popup {
+    left: 85%; 
+  }
 }
 
 
-/*varukorg*/
-.add-to-cart-btn {
-  position: absolute;
-  bottom: 4px; /* placera knappen 10px från botten av .text_kort */
-  right: 10px; /* placera knappen 10px från högerkanten */
-  font-size: 18pt; /* justera storleken på texten för att passa */
-  cursor: pointer;
-  color: white;
-  transition: background-color 0.3s; /* smooth transition vid hover */
-}
-
-.add-to-cart-btn:hover {
-  color: rgba(192, 207, 202, 0.703);
-}
-
-.popup {
-  position: fixed;
-  left: 78%;
-  top: 15%;
-  transform: translate(-50%, -50%);
-  background: white;
-  padding: 20px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  width: 200px; /* Justera bredd efter behov */
-  max-width: 50%;
-  z-index: 1000;
-}
-
-.popup-close-btn {
-  position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-  font-size: 24px;
-  color: black;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.popup-close-btn:hover {
-  color: red; /* Gör krysset rött vid hover */
+/*icon styling desktop*/ 
+@media (min-width: 924px){
+  .popup {
+    left: 88%;
+    top: 3rem;
+    width: 300px; /*större popup rutor för desktop*/ 
+  } 
 }
