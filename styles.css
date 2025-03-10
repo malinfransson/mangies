@@ -13,11 +13,10 @@ h2 {
 
 img {
     display: block;
-    width: 100%; /* Fyller förälderelementet */
-    height: auto; /* Bevarar proportionerna */
-    object-fit: cover; /* Klipper och fyller utan att ändra proportioner */
+    width: 100%; /* fyller förälderelementet */
+    height: auto; /* bevarar proportionerna */
+    object-fit: cover; /* klipper och fyller utan att ändra proportioner */
 }
-
 
 header {
     width: 100%;
@@ -30,7 +29,6 @@ header {
     z-index: 2; /* menyn lägger sig över allt annat vid scroll*/
 }
 
-
 .header_container {
     display: flex;
     align-items: center;
@@ -40,20 +38,20 @@ header {
     flex: 1;
     color: rgba(202, 229, 223, 0.791);
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size:x-large; 
+    font-size: x-large;
 }
 
 
-/* styling för hamburger-menyn*/ 
+/* styling för hamburger-menyn*/
 #hamburger {
-top: 1rem;
-left: 1rem;
-flex: 1;
+    top: 1rem;
+    left: 1rem;
+    flex: 1;
 }
 
 .active #hamburger {
- float: right;
-margin-right: 11%; 
+    float: right;
+    margin-right: 11%;
 }
 
 
@@ -84,13 +82,16 @@ margin-right: 11%;
 #menu li a {
     color: #ffff;
     text-decoration: none;
+    font-family: sans-serif;
 }
 
 /* Styling för sökfältet */
 #searchForm {
     display: flex;
-    align-items: center;  /* vertikal centrering */
-    width: 100%; /* Justera bredden på hela sökfältet */
+    align-items: center;
+    /* vertikal centrering */
+    width: 100%;
+    /* Justera bredden på hela sökfältet */
 }
 
 input[type="text"] {
@@ -100,15 +101,18 @@ input[type="text"] {
     padding: 5px;
     border: none;
     font-size: 12pt;
-    border-radius: 30px; /* rundar hörnen */
-    background-color: #fff; /* bakgrundsfärg */
+    border-radius: 30px;
+    /* rundar hörnen */
+    background-color: #fff;
+    /* bakgrundsfärg */
     height: 50%;
     width: 80%;
     max-width: 300px;
 }
 
 button#searchBtn {
-    right: 10px; /* Placera knappen till höger inom input-fältet */
+    right: 10px;
+    /* Placera knappen till höger inom input-fältet */
     padding: 10px 15px;
     background-color: #2f8f7f;
     color: white;
@@ -127,6 +131,7 @@ button#searchBtn:hover {
     width: 2rem;
     max-width: 40px;
     padding: 5px;
+    cursor: pointer; 
 }
 
 
@@ -154,7 +159,7 @@ main {
     display: inline-block;
     position: relative;
     width: 200px;
-height: 35vh;
+    height: 35vh;
     margin-right: 10px;
 }
 
@@ -165,9 +170,8 @@ height: 35vh;
     object-fit: cover;
 }
 
-.overlay
-{
-display: none;
+.overlay {
+    display: none;
 }
 
 
@@ -184,20 +188,24 @@ display: none;
 }
 
 .card {
-    position: relative; /* denna gör att hjärtanen kan ligga på*/ 
+    position: relative;
+    /* denna gör att hjärtanen kan ligga på*/
     width: 40%;
     height: auto;
-    flex: 1 1 calc(50% - 20px);/* Standard: 2 kolumner */
+    flex: 1 1 calc(50% - 20px);
+    /* Standard: 2 kolumner */
 }
 
 .card_container img {
-    height: 300px; /* sätter fast höjd på bilderna i huvudlayouten */
+    height: 300px;
+    /* sätter fast höjd på bilderna i huvudlayouten */
     object-fit: cover;
     width: 100%;
 }
 
 .card_container.one-column img {
-    height: auto; /* gör att bilderna inte påverkas vid en kolumn layout */
+    height: auto;
+    /* gör att bilderna inte påverkas vid en kolumn layout */
 }
 
 
@@ -209,6 +217,7 @@ display: none;
     margin-bottom: 0;
     margin-top: auto;
     height: 30px;
+    font-family: sans-serif;
 }
 
 /*styling på footer*/
@@ -217,6 +226,8 @@ footer {
     width: 100%;
     padding: 20px;
     background-color: (192, 207, 202, 0.703);
+    font-family: sans-serif;
+    color: rgba(2, 60, 48, 0.791);
 }
 
 .footer-container {
@@ -230,10 +241,6 @@ footer {
     display: flex;
     flex-direction: column;
     width: 100%;
-}
-
-footer h3 {
-    color: rgba(2, 60, 48, 0.791);
 }
 
 footer a {
@@ -252,12 +259,12 @@ footer a:hover {
 }
 
 /* Klass för att ändra till 3 kolumner */
-.card_container.three-columns .card {
+.card_container.three-columns .card { /* 3 kolumner (syns bara på tablet & desktop) */
     flex: 1 1 calc(33.33% - 20px);
 }
 
 /* Klass för att ändra till 4 kolumner */
-.card_container.four-columns .card {
+.card_container.four-columns .card { /* 4 kolumner (syns bara på stora skärmar) */
     flex: 1 1 calc(25% - 15px);
     max-width: calc(25% - 15px);
     box-sizing: border-box;
@@ -265,11 +272,12 @@ footer a:hover {
 
 /* Styling för knapparna */
 .button-container {
-margin-top:30px; 
-margin-bottom: 10px;
-display: flex;
-gap: 10px;
-flex-direction: row-reverse; /* Gör att knapparna hamnar längst till höger */ 
+    margin-top: 30px;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 10px;
+    flex-direction: row-reverse;
+    /* Gör att knapparna hamnar längst till höger */
 }
 
 button {
@@ -290,8 +298,8 @@ button.active {
     font-weight: bold;
 }
 
-/* 3 kolumner (syns bara på tablet & desktop) */
-@media (min-width: 768px) { 
+/*styling för tablet*/ 
+@media (min-width: 768px) {
     .card_container .card {
         flex: 1 1 calc(33.33% - 20px);
     }
@@ -305,50 +313,50 @@ button.active {
         display: none;
     }
 
-    .card_container img
-    {
-    height: 350px; 
+    .card_container img {
+        height: 350px;
     }
 
     .hero {
         height: auto;
     }
 
-input[type="text"] {
-    width: 20vw;
+    input[type="text"] {
+        width: 20vw;
+    }
+
+    /* Overlay som täcker hela bilden */
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 253, 253, 0.7);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        opacity: 0;
+        /* Dold från början */
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    /* Visa overlay vid hover */
+    .image-container:hover .overlay {
+        opacity: 1;
+    }
+
 }
 
-/* Overlay som täcker hela bilden */
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 253, 253, 0.7); 
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    opacity: 0; /* Dold från början */
-    transition: opacity 0.3s ease-in-out;
-}
 
-/* Visa overlay vid hover */
-.image-container:hover .overlay {
-    opacity: 1;
-}
-
-
-} 
-
-
-/* 4 kolumner (syns bara på stora skärmar) */
+/* styling för desktop*/ 
 @media (min-width: 924px) {
     .card_container .card {
         flex: 1 1 calc(25% - 20px);
     }
+
     .card_container.four-columns .card {
         flex: 1 1 calc(25% - 20px);
     }
@@ -358,22 +366,22 @@ input[type="text"] {
         display: none;
     }
 
-    .card_container img
-    {
-    height: 250px;
+    .card_container img {
+        height: 250px;
     }
 
-#namn { 
-    left: 50%;
-    transform: translateX(-50%); /* Centrerar namnet */
-}
+    #namn {
+        left: 50%;
+        transform: translateX(-50%);
+        /* Centrerar namnet */
+    }
 
     #menu {
         position: absolute; /* Fixera menyn */
         height: 100vh;
         width: 200px; /* Sätt en fast bredd på menyn */
         background-color: rgba(2, 60, 48, 0.791);
-        margin-top: 50px; 
+        margin-top: 50px;
     }
 
     #menu ul {
@@ -393,16 +401,19 @@ input[type="text"] {
         display: block;
     }
 
-    header
-    {  
-    position:fixed; 
-    width: 100%;
-    flex-wrap: wrap;
+    #menu li a:hover {
+        color: rgba(255, 253, 253, 0.7);
     }
 
-    /* Justering för headern så att innehållet ligger till höger */ 
+    header {
+        position: fixed;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    /* Justering för headern så att innehållet ligger till höger */
     .header_container {
-margin-left: auto;
+        margin-left: auto;
     }
 
     #namn {
@@ -421,17 +432,20 @@ margin-left: auto;
         margin-left: 200px; /* Gör plats för den fasta menyn */
     }
 
+    .card_container{
+        margin-left: 200px; /* plats för menyn*/ 
+    }
 
-    .footer-column
-    {
-    margin-left: 200px; /* Gör plats för den fasta menyn */
+
+    .footer-column {
+        margin-left: 200px; /* Gör plats för den fasta menyn */
     }
 }
 
 @media (max-width: 767px) {
     .button-container .three-columns-btn,
     .button-container .four-columns-btn {
-        display: none; 
+        display: none;
     }
 
 }
