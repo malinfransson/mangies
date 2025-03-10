@@ -47,14 +47,14 @@
                 </div>
             </div>
 
-            <div id="popup"class="popup">
+            <div id="popup" class="popup">
                 <span class="close" onclick="togglePopup()">&times;</span>
                 <h3>Gillade produkter</h3>
                 <ul id="liked-items">
                     <!--Gillade plagg kommer att dyka upp här -->
                 </ul>
             </div>
-            
+
             <!-- kundkorgsikon i menyn --> <!--OBS FUNKAR EJ ÄNNU-->
             <div class="cart">
                 <div class="cart-icon" onclick="toggleCartPopup()">
@@ -63,7 +63,7 @@
             </div>
             <!-- popup för varukorg -->
             <div id="shopping-cart-popup" class="popup" style="display: none;">
-                <span class="popup-close-btn" onclick="toggleCartPopup()">&times;</span>
+                <span class="close" onclick="toggleCartPopup()">&times;</span>
                 <h3>Varukorg</h3>
                 <ul id="cart-products-list"></ul>
                 <button onclick="clearCart()">Töm varukorgen</button>
@@ -115,123 +115,123 @@
                 </div>
             </div>
 
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="button-container">
+        <button class="one-column-btn" onclick="changeColumns(1)">■</button>
+        <button class="two-column-btn" onclick="changeColumns(2)">■■</button>
+        <button class="three-columns-btn" onclick="changeColumns(3)">■■■</button>
+        <button class="four-columns-btn" onclick="changeColumns(4)">■■■■</button>
+    </div>
+
+
+
+    <div class="card_container">
+
+        <div class="card">
+            <div class="heart-icon" onclick="toggleLike(this)">
+                <span>&hearts;</span>
+            </div>
+            <img src="chyntia-juls-HlVjI5WmoQY-unsplash.jpg" alt="kavaj">
+
+            <div class="text_kort">
+                <p class="product-name">Grå Kavaj</p>&nbsp; <!--mellanslag mellan p-->
+                <p class="price">499 kr</p>
+            </div>
+            <div class="add-to-cart-btn" onclick="addToCart(this)">
+                +
             </div>
 
-    
-              
-            
-              
-            
-             
-            
 
-  
+        </div>
 
-                <div class="button-container">
-                    <button class="one-column-btn" onclick="changeColumns(1)">■</button>
-                    <button class="two-column-btn" onclick="changeColumns(2)">■■</button>
-                    <button class="three-columns-btn" onclick="changeColumns(3)">■■■</button>
-                    <button class="four-columns-btn" onclick="changeColumns(4)">■■■■</button>
-                </div>
-                
-         
-
-            <div class="card_container">
-
-                <div class="card"> 
-                    <div class="heart-icon" onclick="toggleLike(this)">
-                        <span>&hearts;</span>
-                    </div>
-                    <img src="chyntia-juls-HlVjI5WmoQY-unsplash.jpg" alt="kavaj">
-
-                    <div class="text_kort"> 
-                        <p class="product-name">Grå Kavaj</p>&nbsp; <!--mellanslag mellan p-->
-                        <p class="price">499 kr</p>
-                    </div>
-                    <div class="add-to-cart-btn" onclick="addToCart(this)">
-                        +
-                    </div>
-
-
-                </div>
-
-                <div class="card">
-                    <div class="heart-icon" onclick="toggleLike(this)">
-                        <span>&hearts;</span>
-                    </div>
-
-                    <img src="oladimeji-odunsi-aU_eOcelLhQ-unsplash.jpg" alt="accessoarer">
-                    <div class="text_kort">
-                        <p class="product-name">4-kantiga Örhängen</p>&nbsp;
-                        <p class="price">499 kr</p>
-                    </div>
-                    <div class="add-to-cart-btn" onclick="addToCart(this)">
-                        +
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="heart-icon" onclick="toggleLike(this)">
-                        <span>&hearts;</span>
-                    </div>
-
-                    <img src="mina-rad-ioCYSvwcBlc-unsplash.jpg" alt="t-shirt">
-                    <div class="text_kort">
-                        <p class="product-name">Svart T-shirt</p>&nbsp;
-                        <p class="price">499 kr</p>
-                    </div>
-                    <div class="add-to-cart-btn" onclick="addToCart(this)">
-                        +
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="heart-icon" onclick="toggleLike(this)">
-                        <span>&hearts;</span>
-                    </div>
-
-                    <img src="kyle-smith-tlowJ-oYAjU-unsplash.jpg" alt="underklader">
-
-                    <div class="text_kort">
-                        <p class="product-name">Calvin Klein Top</p>&nbsp;
-                        <p class="price">499 kr</p>
-                    </div>
-                    <div class="add-to-cart-btn" onclick="addToCart(this)">
-                        +
-                    </div>
-                </div>
-
-                <div class="card">
-
-                    <div class="heart-icon" onclick="toggleLike(this)">
-                        <span>&hearts;</span>
-                    </div>
-                    <img src="woman-6115105_1280.jpg" alt="klanning">
-                    <div class="text_kort">
-                        <p class="product-name">Flowy Klänning</p>&nbsp;
-                        <p class="price">499 kr</p>
-                    </div>
-                    <div class="add-to-cart-btn" onclick="addToCart(this)">
-                        +
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="heart-icon" onclick="toggleLike(this)">
-                        <span>&hearts;</span>
-                    </div>
-                    <img src="kai-s-photography-2s3GhhJz2uY-unsplash.jpg" alt="klanning">
-                    <div class="text_kort">
-                        <p class="product-name">Blåa Jeans</p>&nbsp;
-                        <p class="price">499 kr</p>
-                    </div>
-                    <div class="add-to-cart-btn" onclick="addToCart(this)">
-                        +
-                    </div>
-                </div>
-        
-                </div>
+        <div class="card">
+            <div class="heart-icon" onclick="toggleLike(this)">
+                <span>&hearts;</span>
             </div>
+
+            <img src="oladimeji-odunsi-aU_eOcelLhQ-unsplash.jpg" alt="accessoarer">
+            <div class="text_kort">
+                <p class="product-name">4-kantiga Örhängen</p>&nbsp;
+                <p class="price">499 kr</p>
+            </div>
+            <div class="add-to-cart-btn" onclick="addToCart(this)">
+                +
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="heart-icon" onclick="toggleLike(this)">
+                <span>&hearts;</span>
+            </div>
+
+            <img src="mina-rad-ioCYSvwcBlc-unsplash.jpg" alt="t-shirt">
+            <div class="text_kort">
+                <p class="product-name">Svart T-shirt</p>&nbsp;
+                <p class="price">499 kr</p>
+            </div>
+            <div class="add-to-cart-btn" onclick="addToCart(this)">
+                +
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="heart-icon" onclick="toggleLike(this)">
+                <span>&hearts;</span>
+            </div>
+
+            <img src="kyle-smith-tlowJ-oYAjU-unsplash.jpg" alt="underklader">
+
+            <div class="text_kort">
+                <p class="product-name">Calvin Klein Top</p>&nbsp;
+                <p class="price">499 kr</p>
+            </div>
+            <div class="add-to-cart-btn" onclick="addToCart(this)">
+                +
+            </div>
+        </div>
+
+        <div class="card">
+
+            <div class="heart-icon" onclick="toggleLike(this)">
+                <span>&hearts;</span>
+            </div>
+            <img src="woman-6115105_1280.jpg" alt="klanning">
+            <div class="text_kort">
+                <p class="product-name">Flowy Klänning</p>&nbsp;
+                <p class="price">499 kr</p>
+            </div>
+            <div class="add-to-cart-btn" onclick="addToCart(this)">
+                +
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="heart-icon" onclick="toggleLike(this)">
+                <span>&hearts;</span>
+            </div>
+            <img src="kai-s-photography-2s3GhhJz2uY-unsplash.jpg" alt="klanning">
+            <div class="text_kort">
+                <p class="product-name">Blåa Jeans</p>&nbsp;
+                <p class="price">499 kr</p>
+            </div>
+            <div class="add-to-cart-btn" onclick="addToCart(this)">
+                +
+            </div>
+        </div>
+
+    </div>
+    </div>
 
     </div>
     </main>
