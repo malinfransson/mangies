@@ -1,15 +1,8 @@
 /* styling för hjärtan*/
 
 /*styling på endast hjärtat i menyn*/
-<<<<<<< HEAD
 .heart {  
   padding-left: 10px; 
-=======
-.heart-container {
-  display: flex;
-  justify-content: center; /* Centrerar innehållet horisontellt */
-  align-items: center; /* Vertikal centrering om det behövs */
->>>>>>> f797cb65e7a15b0a4d4d952a69ef6be0c8532289
 }
 
 .heart {
