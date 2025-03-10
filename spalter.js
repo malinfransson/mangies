@@ -31,13 +31,6 @@ leftButton.addEventListener('click', () => {
         left: -400,  // Scrollar till vänster
         behavior: 'smooth'  // Gör det mjukt
     });
-
-    // Kontrollera om vi är vid första bilden och ska loopa
-    if (scrollContainer.scrollLeft <= 0) {
-        const firstImage = imageContainer.firstElementChild;
-        imageContainer.appendChild(firstImage); // Flytta den första bilden till slutet
-        scrollContainer.scrollLeft = 0;  // Återställ scrollposition
-    }
 });
 
 rightButton.addEventListener('click', () => {
