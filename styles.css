@@ -123,18 +123,12 @@ button#searchBtn:hover {
     background-color: #207b63;
 }
 
-/* knappar längst till höger "gilla" & "varukorg"*/ 
-#ikoner {
-    display: flex;
-    align-items: center;
-    margin-left: auto; /* Skjuter längst till höger */
-    margin-right: 5px;
-}
 
 .cart {
     margin-right: 2vw;
     width: 2rem;
     max-width: 40px;
+    padding: 5px;
 }
 
 .hero {
@@ -259,19 +253,11 @@ footer a:hover {
 
 /* Styling för knapparna */
 .button-container {
-<<<<<<< HEAD
-    margin-top:30px; 
-    margin-bottom: 10px;
-    display: flex;
-    gap: 10px;
-    flex-direction: row-reverse; /* Gör att knapparna hamnar längst till höger */ 
-=======
 margin-top:30px; 
 margin-bottom: 10px;
 display: flex;
 gap: 10px;
 flex-direction: row-reverse; /* Gör att knapparna hamnar längst till höger */ 
->>>>>>> 613dd2bfee0ea57d794326802ff40aa187c72848
 }
 
 button {
