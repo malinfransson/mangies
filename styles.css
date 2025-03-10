@@ -161,11 +161,7 @@ main {
     display: inline-block;
     position: relative;
     width: 200px;
-<<<<<<< HEAD
-    height: 35vh;
-=======
    height: 35vh;
->>>>>>> 942ecc632315265439fb507c0e26640d539cb786
     margin-right: 10px;
 }
 
@@ -466,14 +462,9 @@ button.active {
     }
 
 
-<<<<<<< HEAD
-    .footer-column {
-        margin-left: 200px; /* Gör plats för den fasta menyn */
-=======
     .footer-column
     {
     margin-left: 200px; /* Gör plats för den fasta menyn */
->>>>>>> 942ecc632315265439fb507c0e26640d539cb786
     }
 }
 
