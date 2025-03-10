@@ -373,7 +373,7 @@ input[type="text"] {
         height: 100vh;
         width: 200px; /* Sätt en fast bredd på menyn */
         background-color: rgba(2, 60, 48, 0.791);
-        margin-top: 79px; 
+        margin-top: 50px; 
     }
 
     #menu ul {
