@@ -2,8 +2,7 @@
 
 /*styling på endast hjärtat i menyn*/
 .heart {  
-  position: relative;
-  padding-left: 10px;
+  padding-left: 10px; 
 }
 
 .heart h2{
