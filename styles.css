@@ -262,8 +262,8 @@ footer a:hover {
 
 /* Styling för knapparna */
 .button-container {
-margin-top:30px; 
-margin-bottom: 10px;
+    margin-top:30px; 
+    margin-bottom: 10px;
     display: flex;
     gap: 10px;
     flex-direction: row-reverse; /* Gör att knapparna hamnar längst till höger */ 
