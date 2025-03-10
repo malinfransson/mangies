@@ -121,18 +121,12 @@ button#searchBtn:hover {
     background-color: #207b63;
 }
 
-/* knappar längst till höger "gilla" & "varukorg"*/ 
-#ikoner {
-    display: flex;
-    align-items: center;
-    margin-left: auto; /* Skjuter längst till höger */
-    margin-right: 5px;
-}
 
 .cart {
     margin-right: 2vw;
     width: 2rem;
     max-width: 40px;
+    padding: 5px;
 }
 
 
