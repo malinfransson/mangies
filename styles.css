@@ -256,13 +256,14 @@ footer {
     display: flex; 
     justify-content: space-between; /* Sprider ut elementen */
     align-items: center; /* Centrerar vertikalt */
-    gap: 2rem; /* Mindre mellanrum mellan kolumner */
+    gap: 5rem; /* Mindre mellanrum mellan kolumner */
     width: 100%; /* Tar hela bredden */
 }
 
 .footer-column {
     flex: 1; /* Ser till att båda kolumnerna tar upp lika mycket plats */
-    padding: 10px
+   display: flex;
+   flex-direction: column;
 }
 
 footer a {
@@ -270,14 +271,20 @@ footer a {
     color: rgba(2, 60, 48, 0.791);
 }
 
+
 footer a:hover {
     color: #ffffff;
 }
 
-footer img 
-{
-display: flex;
-width: 15%;
+
+.footer-column .social-links {
+    display: flex; /* Gör så att bilderna ligger bredvid varandra */
+    gap: 10px; /* Lägger till mellanrum mellan ikonerna */
+}
+
+.footer-column img {
+    width: 30px; /* Sätter en fast storlek */
+    height: auto; /* Bevarar bildens proportioner */
 }
 
 
