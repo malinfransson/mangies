@@ -4,6 +4,7 @@ body {
     padding-top: 5rem; /* gör att hero bild hamnar under header */
 }
 
+/*styling för rubriktext h2*/ 
 h2 {
     color: #fff;
     font-stretch: expanded;
@@ -12,30 +13,32 @@ h2 {
 }
 
 img {
-    display: block;
+    display: block; 
     width: 100%; /* fyller förälderelementet */
     height: auto; /* bevarar proportionerna */
     object-fit: cover; /* klipper och fyller utan att ändra proportioner */
 }
 
 header {
-    width: 100%;
-    position: fixed;
-    top: 0;
+    width: 100%; 
+    position: fixed; /* Gör att header följer med när man scrollar */ 
+    top: 0; 
     left: 0;
     background-color: rgba(2, 60, 48, 0.791);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     z-index: 2; /* menyn lägger sig över allt annat vid scroll*/
 }
 
+
 .header_container {
     display: flex;
-    align-items: center;
+    align-items: center; /*lägger alla element centrerat på horisontell axel */ 
 }
 
+
 #namn {
-    flex: 1;
+    flex: 1; /* gör att element i headern tar upp lika mycket yta */ 
     color: rgba(202, 229, 223, 0.791);
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: x-large;
@@ -49,11 +52,11 @@ header {
     flex: 1;
 }
 
+/* positionering för x när meny är aktiv */ 
 .active #hamburger {
     float: right;
     margin-right: 11%;
 }
-
 
 
 #lista {
@@ -62,7 +65,7 @@ header {
     justify-content: center;
 }
 
-
+/* Gör att menyn tar upp 100% när den är aktiv */ 
 #menu.active ul {
     display: block;
     height: 100vh;
@@ -75,10 +78,12 @@ header {
     text-align: center;
 }
 
+/* lägger mellanrum mellan varje kläd kategori */ 
 #menu li {
-    padding-top: 20px;
+    padding-top: 40px;
 }
 
+/* Stylar text i meny */ 
 #menu li a {
     color: #ffff;
     text-decoration: none;
@@ -151,7 +156,7 @@ main {
 .scroll-container {
     position: relative;
     white-space: nowrap;
-    overflow-x: scroll;
+    overflow-x: scroll; /* Gör att bilderna scrollar horisontellt */ 
     border: 1px solid black;
     padding: 20px;
     
@@ -356,7 +361,6 @@ button.active {
     }
 
 }
-
 
 
 /* styling för desktop*/ 
