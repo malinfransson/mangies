@@ -243,30 +243,26 @@ text-align: center;
     font-family: sans-serif;
 }
 
-/*styling på footer*/
 footer {
     bottom: 0;
     width: 100%;
     padding: 20px;
-    background-color: (192, 207, 202, 0.703);
+    background-color: rgba(192, 207, 202, 0.703); /* Fixad bakgrundsfärg */
     font-family: sans-serif;
     color: rgba(2, 60, 48, 0.791);
 }
 
 .footer-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-    width: 2rem;
- 
+    display: flex; 
+    justify-content: space-between; /* Sprider ut elementen */
+    align-items: center; /* Centrerar vertikalt */
+    gap: 2rem; /* Mindre mellanrum mellan kolumner */
+    width: 100%; /* Tar hela bredden */
 }
 
 .footer-column {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    
+    flex: 1; /* Ser till att båda kolumnerna tar upp lika mycket plats */
+    padding: 10px
 }
 
 footer a {
@@ -276,6 +272,12 @@ footer a {
 
 footer a:hover {
     color: #ffffff;
+}
+
+footer img 
+{
+display: flex;
+width: 15%;
 }
 
 
@@ -288,8 +290,6 @@ footer a:hover {
 /* Klass för att ändra till 3 kolumner */
 .card_container.three-columns .card { /* 3 kolumner (syns bara på tablet & desktop) */
     flex: 1 1 calc(33.33% - 20px);
-    max-width: calc(33.33% - 20px);
-    box-sizing: border-box;
 }
 
 /* Klass för att ändra till 4 kolumner */
@@ -367,7 +367,8 @@ button.active {
         justify-content: center;
         align-items: center;
         text-align: center;
-        opacity: 0; /* Dold från början */
+        opacity: 0;
+        /* Dold från början */
         transition: opacity 0.3s ease-in-out;
     }
 
@@ -470,7 +471,6 @@ button.active {
     margin-left: 200px; /* Gör plats för den fasta menyn */
     }
 }
-
 
 @media (max-width: 767px) {
     .button-container .three-columns-btn,
