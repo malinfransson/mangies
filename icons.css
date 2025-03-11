@@ -40,12 +40,12 @@
 /*styling för varukorg*/
 .add-to-cart-btn {
   position: absolute;
-  bottom: 4px; /* placera +knappen 10px från botten*/
-  right: 10px; /* placera +knappen 10px från högerkanten*/
-  font-size: 18pt;/* justera storleken på texten för att passa */
+  bottom: 4px; 
+  right: 10px; 
+  font-size: 18pt;
   cursor: pointer;
   color: white;
-  transition: background-color 0.3s; /* smooth transition vid hover */
+  transition: background-color 0.3s; 
 }
 
 .add-to-cart-btn:hover {
