@@ -284,6 +284,8 @@ footer a:hover {
 /* Klass för att ändra till 3 kolumner */
 .card_container.three-columns .card { /* 3 kolumner (syns bara på tablet & desktop) */
     flex: 1 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    box-sizing: border-box;
 }
 
 /* Klass för att ändra till 4 kolumner */
@@ -361,8 +363,7 @@ button.active {
         justify-content: center;
         align-items: center;
         text-align: center;
-        opacity: 0;
-        /* Dold från början */
+        opacity: 0; /* Dold från början */
         transition: opacity 0.3s ease-in-out;
     }
 
@@ -465,6 +466,7 @@ button.active {
     margin-left: 200px; /* Gör plats för den fasta menyn */
     }
 }
+
 
 @media (max-width: 767px) {
     .button-container .three-columns-btn,
