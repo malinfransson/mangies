@@ -271,9 +271,8 @@ footer a {
     color: rgba(2, 60, 48, 0.791);
 }
 
-
 footer a:hover {
-    color: #ffffff;
+    color: #ffffff; 
 }
 
 
@@ -288,7 +287,6 @@ footer a:hover {
 }
 
 
-
 /* Klass för att ändra till 1 kolumn */
 .card_container.one-column .card {
     flex: 1 1 100%;
@@ -296,8 +294,8 @@ footer a:hover {
 
 /* Klass för att ändra till 3 kolumner */
 .card_container.three-columns .card { /* 3 kolumner (syns bara på tablet & desktop) */
-    flex: 1 1 calc(33.33% - 20px);
-    max-width: calc(25% - 15px);
+    flex: 1 1 calc(33.33% - 15px);
+    max-width: calc(33.33% - 15px);
     box-sizing: border-box;
 }
 
@@ -306,18 +304,20 @@ footer a:hover {
     flex: 1 1 calc(25% - 15px);
     max-width: calc(25% - 15px);
     box-sizing: border-box;
+    justify-content: center;
 }
 
-/* Styling för knapparna */
+   /* Gör att knapparna hamnar längst till höger */
 .button-container {
     margin-top: 30px;
     margin-bottom: 10px;
     display: flex;
     gap: 10px;
     flex-direction: row-reverse;
-    /* Gör att knapparna hamnar längst till höger */
+
 }
 
+    /* Styling för knapparna */
 button {
     padding: 10px;
     background-color: rgb(2, 60, 48);
@@ -339,11 +339,7 @@ button.active {
 /*styling för tablet*/ 
 @media (min-width: 768px) {
     .card_container .card {
-        flex: 1 1 calc(33.33% - 20px);
-    }
-
-    .card_container.three-columns .card {
-        flex: 1 1 calc(33.33% - 20px);
+        flex: 1 1 calc(33.33% - 15px);
     }
 
     .button-container .one-column-btn,
@@ -352,42 +348,21 @@ button.active {
     }
 
     .card_container img {
-        height: 350px;
+        height: 400px;
     }
 
     .hero {
         height: auto;
     }
 
-  
-
-
 }
+
 
 
 /* styling för desktop*/ 
 @media (min-width: 924px) {
     .card_container .card {
         flex: 1 1 calc(25% - 15px);
-    }
-
-    .card_container.four-columns .card {
-        flex: 1 1 calc(25% - 15px);
-    }
-
-    .button-container .one-column-btn,
-    .button-container .two-column-btn {
-        display: none;
-    }
-
-    .card_container img {
-        height: 250px;
-    }
-
-    #namn {
-        left: 50%;
-        transform: translateX(-50%);
-        /* Centrerar namnet */
     }
 
     #menu {
@@ -401,7 +376,6 @@ button.active {
     #menu ul {
         display: block; /* Visa menyn hela tiden */
         padding: 20px 0;
-        list-style: none;
         text-align: left;
     }
 
@@ -409,33 +383,31 @@ button.active {
         padding: 15px;
     }
 
-    #menu li a {
-        color: white;
-        text-decoration: none;
-        display: block;
-    }
-
     #menu li a:hover {
         color: rgba(255, 253, 253, 0.7);
     }
 
-    header {
-        position: fixed;
-        width: 100%;
-        flex-wrap: wrap;
+    .header
+    {
+        position: relative;
     }
+
 
     /* Justering för headern så att innehållet ligger till höger */
     .header_container {
         margin-left: auto;
+   
     }
 
     #namn {
-        position: fixed;
-        left: 50%;
-        transform: translateX(-50%); /* Behåller centrerad stil */
-        z-index: 100; /* Gör att namnet ligger ovanpå */
+        position: absolute;
+            left: 50%;
+            transform: translateX(-50%); /* Flyttar elementet tillbaka 50% av sin egen bredd för exakt centrering */
+            text-align: center;
+            font-size: x-large; 
+
     }
+
 
     /* Justering för hamburger-knappen, dölja den när menyn är fast */
     #hamburger {
@@ -479,14 +451,6 @@ button.active {
     .image-container:hover .overlay {
         opacity: 1;
     }
-
-    input[type="text"] {
-        width: 20vw;
-    }
-
-
-
-
 
 }
 
