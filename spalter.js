@@ -41,3 +41,26 @@ rightButton.addEventListener('click', () => {
 
 });
 
+
+function updateColumns() {
+    const container = document.querySelector('.card_container');
+
+    if (window.innerWidth >= 924) {
+        container.classList.remove('one-column', 'two-columns', 'three-columns');
+        container.classList.add('four-columns'); // 4 kolumner på stora skärmar
+    } else if (window.innerWidth >= 768) {
+        container.classList.remove('one-column', 'two-columns', 'four-columns');
+        container.classList.add('three-columns'); // 3 kolumner på tablets
+    } else if (window.innerWidth >= 480) {
+        container.classList.remove('one-column', 'three-columns', 'four-columns');
+        container.classList.add('two-columns'); // 2 kolumner på små tablets
+    } else {
+        container.classList.remove('two-columns', 'three-columns', 'four-columns');
+        container.classList.add('one-column'); // 1 kolumn på mobil
+    }
+}
+
+// Kör funktionen vid sidans start och när fönstret ändrar storlek
+window.addEventListener('load', updateColumns);
+window.addEventListener('resize', updateColumns);
+
