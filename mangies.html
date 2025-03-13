@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="hamburger.css">
     <link rel="stylesheet" href="icons.css">
+    <link rel="stylesheet" href="addremove.css">
 
 </head>
 
@@ -114,11 +115,11 @@
                     <img src="kai-s-photography-2s3GhhJz2uY-unsplash.jpg" alt="Bild 3">
                     <div class="overlay">Jeans</div>
                 </div>
-                
+
                 <button class="scroll-btn right">→</button>
             </div>
 
-        </div>
+    </div>
 
 
 
@@ -199,7 +200,6 @@
         </div>
 
         <div class="card">
-
             <div class="heart-icon" onclick="toggleLike(this)">
                 <span>&hearts;</span>
             </div>
@@ -226,12 +226,48 @@
                 +
             </div>
         </div>
+
+
+    </div>
+
+    </div>
+    
+     <!-- Toggle-knapp för att visa/dölja knappar -->
+     <button id="toggleBtn2" onclick="toggleButtons()">🙈</button> 
+     <!-- Container för knapparna -->
+     <div id="buttons2" style="display: none;">
+         <button onclick="copyCardTemplate()">Lägg till Mall för Card</button>
+         <button onclick="copyImageContainerTemplate()">Lägg till Mall för Image-container</button>
+         <button onclick="removeLastCard()">Ta bort senaste Card</button>
+         <button onclick="removeLastImageContainer()">Ta bort senaste Image-container</button>
+     </div>
+     
+    <div id="templates">
+        <!-- Mall för .card -->
+        <div id="content-template-card" class="card">
+            <div class="heart-icon" onclick="toggleLike(this)">
+                <span>&hearts;</span>
+            </div>
+            <img src="https://via.placeholder.com/400x100/eee/222?text=Card+Image">
+            <div class="text_kort">
+                <p class="product-name">Produktnamn</p>
+                <p class="price">499 kr</p>
+            </div>
+            <div class="add-to-cart-btn" onclick="addToCart(this)">
+                +
+            </div>
+        </div>
         
+        <!-- Mall för .image-container -->
+        <div id="content-template-image" class="image-container">
+            <img src="https://via.placeholder.com/400x100/eee/222?text=Image+Container">
+            <div class="overlay">Ny Kategori</div>
+        </div>
+    </div>
+    
+    
+    
 
-    </div>
-    </div>
-
-    </div>
     </main>
     </div>
 
@@ -239,13 +275,13 @@
         <div class="footer-container">
             <div class="footer-column">
                 <h3>Våra sociala medier:</h3>
-            <div class="social-links"> 
-                <a href="https://www.instagram1.com/mangies.brand"> 
-                <img src="logo-ig-png-32473.png" alt="Instagram"> </a> <br>
-                <a href="https://www.tiktok1.com/@mangies.brand"> 
-                <img src="tik-tok-logo-33081.png" alt="tiktok"> 
-                </a>
-            </div>
+                <div class="social-links">
+                    <a href="https://www.instagram1.com/mangies.brand">
+                        <img src="logo-ig-png-32473.png" alt="Instagram"> </a> <br>
+                    <a href="https://www.tiktok1.com/@mangies.brand">
+                        <img src="tik-tok-logo-33081.png" alt="tiktok">
+                    </a>
+                </div>
             </div>
             <div class="footer-column">
                 <h3>Kontakt:</h3>
@@ -254,11 +290,13 @@
 
             </div>
         </div>
+
     </footer>
 
     <script src="menu.js"></script> <!-- testar att lägga här för att det ska laddas korrekt-->
     <script src="spalter.js"></script>
     <script src="icons.js"></script>
+    <script type="text/javascript" src="addremove.js"></script>
 </body>
 
 
