@@ -362,7 +362,6 @@ button.active {
 
 }
 
-
 /* styling för desktop*/ 
 @media (min-width: 924px) {
     .card_container .card {
