@@ -5,7 +5,7 @@
   
   /* Styling för knappen som visar/döljer mallarna */
   #toggleBtn2 {
-    display: block !important;
+    display: block;
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -28,21 +28,25 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-top: 10px;
     padding: 10px;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 20px;
+    right: 20px;  
+    z-index: 999; 
+    max-width: 20%; 
   }
   
   #buttons2 button {
-    background-color: #4CAF50;
+    background-color: rgba(2, 60, 48, 0.791);
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 10pt;
     cursor: pointer;
     transition: background-color 0.3s;
   }
@@ -56,5 +60,4 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center;
   }
