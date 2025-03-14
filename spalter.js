@@ -60,7 +60,10 @@ function updateColumns() {
     }
 }
 
+
+
 // Kör funktionen vid sidans start och när fönstret ändrar storlek
 window.addEventListener('load', updateColumns);
 window.addEventListener('resize', updateColumns);
+
 
