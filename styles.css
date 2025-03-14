@@ -1,8 +1,7 @@
 /* mobile first */
 body {
     background-color: rgba(192, 207, 202, 0.703);
-    padding-top: 5rem;
-    /* gör att hero bild hamnar under header */
+    padding-top: 5rem; /* gör att hero bild hamnar under header */
 }
 
 /*styling för rubriktext h2*/
@@ -15,38 +14,31 @@ h2 {
 
 img {
     display: block;
-    width: 100%;
-    /* fyller förälderelementet */
-    height: auto;
-    /* bevarar proportionerna */
-    object-fit: cover;
-    /* klipper och fyller utan att ändra proportioner */
+    width: 100%; /* fyller förälderelementet */
+    height: auto; /* bevarar proportionerna */
+    object-fit: cover; /* klipper och fyller utan att ändra proportioner */
 }
 
 header {
     width: 100%;
-    position: fixed;
-    /* Gör att header följer med när man scrollar */
+    position: fixed; /* Gör att header följer med när man scrollar */
     top: 0;
     left: 0;
     background-color: rgba(2, 60, 48, 0.791);
     display: flex;
     justify-content: space-between;
-    z-index: 2;
-    /* menyn lägger sig över allt annat vid scroll*/
+    z-index: 2; /* menyn lägger sig över allt annat vid scroll*/
 }
 
 
 .header_container {
     display: flex;
-    align-items: center;
-    /*lägger alla element centrerat på horisontell axel */
+    align-items: center; /*lägger alla element centrerat på horisontell axel */
 }
 
 
 #namn {
-    flex: 1;
-    /* gör att element i headern tar upp lika mycket yta */
+    flex: 1; /* gör att element i headern tar upp lika mycket yta */
     color: rgba(202, 229, 223, 0.791);
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: x-large;
@@ -101,10 +93,8 @@ header {
 /* Styling för sökfältet */
 #searchForm {
     display: flex;
-    align-items: center;
-    /* vertikal centrering */
-    width: 100%;
-    /* Justera bredden på hela sökfältet */
+    align-items: center; /* vertikal centrering */
+    width: 100%; /* Justera bredden på hela sökfältet */
 }
 
 input[type="text"] {
@@ -115,17 +105,14 @@ input[type="text"] {
     border: none;
     font-size: 12pt;
     border-radius: 30px;
-    /* rundar hörnen */
     background-color: #fff;
-    /* bakgrundsfärg */
     height: 50%;
     width: 80%;
     max-width: 300px;
 }
 
 button#searchBtn {
-    right: 10px;
-    /* Placera knappen till höger inom input-fältet */
+    right: 10px; /* Placera knappen till höger om input-fältet */
     padding: 10px 15px;
     background-color: #2f8f7f;
     color: white;
@@ -164,8 +151,7 @@ main {
 .scroll-container {
     position: relative;
     white-space: nowrap;
-    overflow-x: scroll;
-    /* Gör att bilderna scrollar horisontellt */
+    overflow-x: scroll; /* Gör att bilderna scrollar horisontellt */
     border: 1px solid black;
     padding: 20px;
 
@@ -190,8 +176,6 @@ main {
     text-align: center;
 }
 
-
-
 .scroll-btn {
     position: sticky;
     transform: translateY(-200%);
@@ -212,7 +196,6 @@ main {
     right: 10px;
 }
 
-
 .card_container {
     display: flex;
     flex-wrap: wrap;
@@ -225,26 +208,26 @@ main {
 }
 
 .card {
-    position: relative;
-    /* denna gör att hjärtanen kan ligga på*/
-    width: 40%;
+    position: relative; /* denna gör att hjärtanen kan ligga på*/
+    flex: 1 1 calc(50% - 10px); /* Standard: 2 kolumner */
     height: auto;
-    flex: 1 1 calc(50% - 20px);
-    /* Standard: 2 kolumner */
+    box-sizing: border-box;
 }
 
+.card_container.two-columns .card {
+    max-width: calc(50% - 10px);
+}
+
+
 .card_container img {
-    height: 300px;
-    /* sätter fast höjd på bilderna i huvudlayouten */
+    height: 300px; /* sätter fast höjd på bilderna i huvudlayouten */
     object-fit: cover;
     width: 100%;
 }
 
 .card_container.one-column img {
-    height: auto;
-    /* gör att bilderna inte påverkas vid en kolumn layout */
+    height: auto; /* gör att bilderna inte påverkas vid en kolumn layout */
 }
-
 
 .text_kort {
     display: flex;
@@ -261,27 +244,21 @@ footer {
     bottom: 0;
     width: 100%;
     padding: 20px;
-    background-color: rgba(192, 207, 202, 0.703);
-    /* Fixad bakgrundsfärg */
+    background-color: rgba(192, 207, 202, 0.703); /* Fixad bakgrundsfärg */
     font-family: sans-serif;
     color: rgba(2, 60, 48, 0.791);
 }
 
 .footer-container {
     display: flex;
-    justify-content: space-between;
-    /* Sprider ut elementen */
-    align-items: center;
-    /* Centrerar vertikalt */
+    justify-content: space-between; /* Sprider ut elementen */
+    align-items: center; 
     gap: 5rem;
-    /* Mindre mellanrum mellan kolumner */
     width: 100%;
-    /* Tar hela bredden */
 }
 
 .footer-column {
-    flex: 1;
-    /* Ser till att båda kolumnerna tar upp lika mycket plats */
+    flex: 1; /* Ser till att båda kolumnerna tar upp lika mycket plats */
     display: flex;
     flex-direction: column;
 }
@@ -297,23 +274,20 @@ footer a:hover {
 
 
 .footer-column .social-links {
-    display: flex;
-    /* Gör så att bilderna ligger bredvid varandra */
-    gap: 10px;
-    /* Lägger till mellanrum mellan ikonerna */
+    display: flex; /* Gör så att bilderna ligger bredvid varandra */
+    gap: 10px; /* Lägger till mellanrum mellan ikonerna */
 }
 
 .footer-column img {
-    width: 30px;
-    /* Sätter en fast storlek */
-    height: auto;
-    /* Bevarar bildens proportioner */
+    width: 30px; /* Sätter en fast storlek */
+    height: auto; /* Bevarar bildens proportioner */
 }
 
 
 /* Klass för att ändra till 1 kolumn */
 .card_container.one-column .card {
     flex: 1 1 100%;
+    min-width: 100%;
 }
 
 /* Klass för att ändra till 3 kolumner */
@@ -391,18 +365,15 @@ button.active {
     }
 
     #menu {
-        position: absolute;
-        /* Fixera menyn */
+        position: absolute; /* Fixera menyn */
         height: 100vh;
-        width: 200px;
-        /* Sätt en fast bredd på menyn */
+        width: 200px; /* Sätt en fast bredd på menyn */
         background-color: rgba(2, 60, 48, 0.791);
         margin-top: 50px;
     }
 
     #menu ul {
-        display: block;
-        /* Visa menyn hela tiden */
+        display: block; /* Visa menyn hela tiden */
         padding: 20px 0;
         text-align: left;
     }
@@ -429,8 +400,7 @@ button.active {
     #namn {
         position: absolute;
         left: 50%;
-        transform: translateX(-50%);
-        /* Flyttar elementet tillbaka 50% av sin egen bredd för exakt centrering */
+        transform: translateX(-50%); /* Flyttar elementet tillbaka 50% av sin egen bredd för exakt centrering */
         text-align: center;
         font-size: x-large;
 
@@ -443,19 +413,16 @@ button.active {
     }
 
     main {
-        margin-left: 200px;
-        /* Gör plats för den fasta menyn */
+        margin-left: 200px; /* Gör plats för den fasta menyn */
     }
 
     .card_container {
-        margin-left: 200px;
-        /* plats för menyn*/
+        margin-left: 200px; /* plats för menyn*/
     }
 
 
     .footer-column {
-        margin-left: 200px;
-        /* Gör plats för den fasta menyn */
+        margin-left: 200px; /* Gör plats för den fasta menyn */
     }
 
     /* Overlay som täcker hela bilden */
@@ -472,8 +439,7 @@ button.active {
         justify-content: center;
         align-items: center;
         text-align: center;
-        opacity: 0;
-        /* Dold från början */
+        opacity: 0; /* Dold från början */
         transition: opacity 0.3s ease-in-out;
     }
 
@@ -490,5 +456,5 @@ button.active {
     .button-container .four-columns-btn {
         display: none;
     }
-
+    
 }
