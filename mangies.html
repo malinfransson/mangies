@@ -38,7 +38,7 @@
             </div>
 
             <form id="searchForm" action="search_results.html" method="get">
-                <input type="text" placeholder="Search.." required> <!-- test för sökfält-->
+                <input type="text" placeholder="Search.." required> 
                 <button type="submit">Sök</button>
             </form>
 
@@ -56,7 +56,7 @@
                 </ul>
             </div>
 
-            <!-- kundkorgsikon i menyn --> <!--OBS FUNKAR EJ ÄNNU-->
+            <!-- kundkorgsikon i menyn --> 
             <div class="cart">
                 <div class="cart-icon" onclick="toggleCartPopup()">
                     <img src="varukorg.png" alt="varukorg">
@@ -132,7 +132,7 @@
 
 
 
-    <div class="card_container">
+    <div id="card-container" class="card_container">
 
         <div class="card">
             <div class="heart-icon" onclick="toggleLike(this)">
@@ -227,44 +227,44 @@
 
 
     </div>
-<!-- Toggle-knapp för att visa/dölja knappar -->
-<button id="toggleBtn2" onclick="toggleButtons()">🙈</button> 
+    <!-- Toggle-knapp för att visa/dölja knappar -->
+    <button id="toggleBtn2" onclick="toggleButtons()">🙈</button>
 
-<!-- Container för knapparna -->
-<div id="buttons2" style="display: none;">
-    <button onclick="copyCardTemplate()">Lägg till Produkt</button>
-    <button onclick="copyImageContainerTemplate()">Lägg till Kategori</button>
-    <button onclick="removeLastCard()">Ta bort Produkt</button>
-    <button onclick="removeLastImageContainer()">Ta bort Kategori</button>
-</div>
-
-<!-- Container för Card och Image-container -->
-<div id="card-container" class="card_container"></div>
-<div id="image-container-wrapper"></div>
-
-<!-- Mallar för Card och Image-container (dolda från början) -->
-<div id="templates" style="display: none;">
-    <!-- Mall för .card -->
-    <div id="content-template-card" class="card">
-        <div class="heart-icon" onclick="toggleLike(this)">
-            <span>&hearts;</span>
-        </div>
-        <img src="kai-s-photography-2s3GhhJz2uY-unsplash.jpg" alt="jeans">
-        <div class="text_kort">
-            <p class="product-name">Blåa Jeans</p>&nbsp;
-            <p class="price">499 kr</p>
-        </div>
-        <div class="add-to-cart-btn" onclick="addToCart(this)">
-            +
-        </div>
+    <!-- Container för knapparna -->
+    <div id="buttons2" style="display: none;">
+        <button onclick="copyCardTemplate()">Lägg till Produkt</button>
+        <button onclick="copyImageContainerTemplate()">Lägg till Kategori</button>
+        <button onclick="removeLastCard()">Ta bort Produkt</button>
+        <button onclick="removeLastImageContainer()">Ta bort Kategori</button>
     </div>
 
-    <!-- Mall för .image-container -->
-    <div id="content-template-image" class="image-container">
-        <img src="kai-s-photography-2s3GhhJz2uY-unsplash.jpg" alt="Bild 3">
-        <div class="overlay">Jeans</div>
+    <!-- Container för Card och Image-container -->
+    <div id="card-container" class="card_container"></div>
+    <div id="image-container-wrapper"></div>
+
+    <!-- Mallar för Card och Image-container (dolda från början) -->
+    <div id="templates" style="display: none;">
+        <!-- Mall för .card -->
+        <div id="content-template-card" class="card">
+            <div class="heart-icon" onclick="toggleLike(this)">
+                <span>&hearts;</span>
+            </div>
+            <img src="kai-s-photography-2s3GhhJz2uY-unsplash.jpg" alt="jeans">
+            <div class="text_kort">
+                <p class="product-name">Blåa Jeans</p>&nbsp;
+                <p class="price">499 kr</p>
+            </div>
+            <div class="add-to-cart-btn" onclick="addToCart(this)">
+                +
+            </div>
+        </div>
+
+        <!-- Mall för .image-container -->
+        <div id="content-template-image" class="image-container">
+            <img src="kai-s-photography-2s3GhhJz2uY-unsplash.jpg" alt="Bild 3">
+            <div class="overlay">Jeans</div>
+        </div>
     </div>
-</div>
 
 
     </main>
@@ -292,11 +292,10 @@
 
     </footer>
 
-    <script src="menu.js"></script> <!-- testar att lägga här för att det ska laddas korrekt-->
+    <script src="menu.js"></script> <!-- här för att det ska laddas korrekt-->
     <script src="spalter.js"></script>
     <script src="icons.js"></script>
     <script type="text/javascript" src="addremove.js"></script>
 </body>
-
 
 </html>
